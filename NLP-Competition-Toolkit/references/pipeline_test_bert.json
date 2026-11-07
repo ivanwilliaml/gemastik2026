@@ -1,0 +1,50 @@
+{
+ "classification": {
+  "ok": true,
+  "detik": 479.2,
+  "sel": 14,
+  "bert": true
+ },
+ "classification_binary": {
+  "ok": true,
+  "detik": 256.0,
+  "sel": 14,
+  "bert": true
+ },
+ "multilabel": {
+  "ok": true,
+  "detik": 108.1,
+  "sel": 12,
+  "bert": true
+ },
+ "regression": {
+  "ok": true,
+  "detik": 74.8,
+  "sel": 12,
+  "bert": true
+ },
+ "pair": {
+  "ok": true,
+  "detik": 64.5,
+  "sel": 11,
+  "bert": true
+ },
+ "ner": {
+  "ok": true,
+  "detik": 163.9,
+  "sel": 7,
+  "bert": true
+ },
+ "qa": {
+  "ok": true,
+  "detik": 23.8,
+  "sel": 6,
+  "bert": true
+ },
+ "classification_mbg": {
+  "ok": true,
+  "detik": 311.8,
+  "sel": 14,
+  "bert": true
+ }
+}

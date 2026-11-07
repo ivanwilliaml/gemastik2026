@@ -1,0 +1,5 @@
+t_ = ["Program MBG bagus sekali untuk anak", "program mbg BAGUS sekali untuk anak!", "topik lain sama sekali berbeda", "Program MBG bagus sekali untuk anak kita"]
+g = exact_groups(t_); assert g[0] == g[1] != g[2]
+g = minhash_groups(t_, threshold=.6); assert g[0] == g[1] == g[3] != g[2]
+g = pair_groups(["a", "b", "x"], ["b", "c", "y"]); assert g[0] == g[1] != g[2]
+assert group_size([0, 0, 1]).tolist() == [2, 2, 1]

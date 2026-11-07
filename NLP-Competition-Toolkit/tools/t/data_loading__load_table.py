@@ -1,0 +1,6 @@
+pd.DataFrame({"text": ["a", "b"], "y": [0, 1]}).to_csv("t1.csv", index=False)
+assert read_any("t1.csv").shape == (2, 2) and read_any("t1.parquet").shape == (2, 2)
+open("t2.csv", "wb").write("text\ncaf\xe9\n".encode("latin-1"))
+assert read_any("t2.csv", cache=False).shape == (1, 1)
+pd.DataFrame({"text": ["a"]}).to_json("t3.jsonl", orient="records", lines=True)
+assert read_any("t3.jsonl").shape == (1, 1)

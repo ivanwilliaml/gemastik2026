@@ -1,0 +1,1165 @@
+window.TK = window.TK || {};
+TK.catalog = [
+{
+"key": "indonlu_sentiment",
+"name": "IndoNLU SMSA (sentimen)",
+"source": "GitHub: IndoNLP/indonlu",
+"url": "https://github.com/IndoNLP/indonlu",
+"tasks": [
+"binary",
+"sentiment",
+"multiclass"
+],
+"rows": "11.000 / 1.260 / 500",
+"classes": 3,
+"license": "Lihat repo (LICENSE Apache-2.0; HF: MIT)",
+"licenseOk": true,
+"bytes": 2509641,
+"lang": "id",
+"language": "id",
+"chars": "Ulasan dan opini, positif/netral/negatif. TSV tanpa header. Sudah melalui preprocessing.",
+"download": {
+"type": "files",
+"files": {
+"train.tsv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/smsa_doc-sentiment-prosa/train_preprocess.tsv",
+"valid.tsv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/smsa_doc-sentiment-prosa/valid_preprocess.tsv",
+"test.tsv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/smsa_doc-sentiment-prosa/test_preprocess.tsv"
+}
+},
+"local": true
+},
+{
+"key": "id_emotion",
+"name": "IndoNLU EmoT (emosi)",
+"source": "GitHub: IndoNLP/indonlu",
+"url": "https://github.com/IndoNLP/indonlu",
+"tasks": [
+"multiclass",
+"sentiment"
+],
+"rows": "3.521 / 440 / 440",
+"classes": 5,
+"license": "Lihat repo (LICENSE Apache-2.0; HF: MIT)",
+"licenseOk": true,
+"bytes": 840988,
+"lang": "id",
+"language": "id",
+"chars": "Tweet: anger, happy, love, sadness, fear. Kolom `label`, `tweet`. Ada slang dan token username.",
+"download": {
+"type": "files",
+"files": {
+"train.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/emot_emotion-twitter/train_preprocess.csv",
+"valid.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/emot_emotion-twitter/valid_preprocess.csv",
+"test.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/emot_emotion-twitter/test_preprocess.csv"
+}
+},
+"local": true
+},
+{
+"key": "nergrit",
+"name": "NERGrit via IndoNLU",
+"source": "GitHub: IndoNLP/indonlu",
+"url": "https://github.com/IndoNLP/indonlu",
+"tasks": [
+"ner"
+],
+"rows": "1.672 / 209 / 209 kalimat",
+"classes": 7,
+"license": "Lihat repo (LICENSE Apache-2.0; HF: MIT)",
+"licenseOk": true,
+"bytes": 651225,
+"lang": "id",
+"language": "id",
+"chars": "Format token + tab + tag BIO. PERSON, PLACE, ORGANISATION. Kecil, cocok untuk uji pipeline NER Indonesia.",
+"download": {
+"type": "files",
+"files": {
+"train.txt": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/nergrit_ner-grit/train_preprocess.txt",
+"valid.txt": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/nergrit_ner-grit/valid_preprocess.txt",
+"test.txt": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/nergrit_ner-grit/test_preprocess.txt"
+}
+},
+"local": true
+},
+{
+"key": "indonli",
+"name": "IndoNLI",
+"source": "GitHub: ir-nlp-csui/indonli",
+"url": "https://github.com/ir-nlp-csui/indonli",
+"tasks": [
+"pair"
+],
+"rows": "10.330 / 2.197 / 2.201 (lay) / 2.984 (expert)",
+"classes": 3,
+"license": "CC-BY-SA-4.0 (HF)",
+"licenseOk": true,
+"bytes": 6977877,
+"lang": "id",
+"language": "id",
+"chars": "NLI Indonesia: entailment, neutral, contradiction. Premis berasal dari berbagai genre. Ada test expert yang lebih sulit.",
+"download": {
+"type": "files",
+"files": {
+"train.jsonl": "https://raw.githubusercontent.com/ir-nlp-csui/indonli/main/data/indonli/train.jsonl",
+"val.jsonl": "https://raw.githubusercontent.com/ir-nlp-csui/indonli/main/data/indonli/val.jsonl",
+"test_lay.jsonl": "https://raw.githubusercontent.com/ir-nlp-csui/indonli/main/data/indonli/test_lay.jsonl",
+"test_expert.jsonl": "https://raw.githubusercontent.com/ir-nlp-csui/indonli/main/data/indonli/test_expert.jsonl"
+}
+},
+"local": true
+},
+{
+"key": "id_multilabel_hate",
+"name": "Indonesian Multi-label Hate Speech",
+"source": "GitHub: okkyibrohim",
+"url": "https://github.com/okkyibrohim/id-multi-label-hate-speech-and-abusive-language-detection",
+"tasks": [
+"multilabel"
+],
+"rows": "13.169",
+"classes": 12,
+"license": "CC-BY-NC-SA-4.0",
+"licenseOk": false,
+"bytes": 1858473,
+"lang": "id",
+"language": "id",
+"chars": "Tweet dengan 12 label biner. Berisi ujaran kasar, jadi pakai untuk latihan saja. Baca dengan `encoding='latin-1'`: UTF-8 gagal.",
+"download": {
+"type": "files",
+"files": {
+"re_dataset.csv": "https://raw.githubusercontent.com/okkyibrohim/id-multi-label-hate-speech-and-abusive-language-detection/master/re_dataset.csv"
+}
+},
+"local": true
+},
+{
+"key": "gplay_review",
+"name": "Google Play Review (ID)",
+"source": "HF: jakartaresearch/google-play-review",
+"url": "https://huggingface.co/datasets/jakartaresearch/google-play-review",
+"tasks": [
+"sentiment",
+"regression"
+],
+"rows": "7.028 / 3.012",
+"classes": 2,
+"license": "CC-BY-4.0",
+"licenseOk": true,
+"bytes": 662321,
+"lang": "id",
+"language": "id",
+"chars": "Ulasan aplikasi. `label` pos/neg dan `stars` 1–5, sehingga bisa untuk klasifikasi atau regresi.",
+"download": {
+"type": "hf",
+"repo": "jakartaresearch/google-play-review"
+},
+"local": true
+},
+{
+"key": "indonews",
+"name": "IndoNews",
+"source": "HF: jakartaresearch/indonews",
+"url": "https://huggingface.co/datasets/jakartaresearch/indonews",
+"tasks": [
+"multiclass",
+"topic",
+"keyword"
+],
+"rows": "6.127 / 2.627",
+"classes": 5,
+"license": "CC-BY-4.0",
+"licenseOk": true,
+"bytes": 11131427,
+"lang": "id",
+"language": "id",
+"chars": "Berita per kategori: bola, news, bisnis, tekno, otomotif. Tidak seimbang: otomotif hanya 130 di train. Abaikan label untuk unsupervised.",
+"download": {
+"type": "hf",
+"repo": "jakartaresearch/indonews"
+},
+"local": true
+},
+{
+"key": "nusax_senti",
+"name": "NusaX-Senti",
+"source": "HF: indonlp/NusaX-senti",
+"url": "https://huggingface.co/datasets/indonlp/NusaX-senti",
+"tasks": [
+"sentiment"
+],
+"rows": "500 / 100 / 400 per bahasa",
+"classes": 3,
+"license": "CC-BY-SA-4.0",
+"licenseOk": true,
+"bytes": 167863,
+"lang": "multi",
+"language": "multi",
+"chars": "12 bahasa termasuk Indonesia, Jawa, Sunda, Minang. Untuk uji multibahasa. Ganti config `ind` sesuai kebutuhan.",
+"download": {
+"type": "hf",
+"repo": "indonlp/NusaX-senti",
+"config": "ind"
+},
+"local": false
+},
+{
+"key": "massive_id",
+"name": "MASSIVE Indonesian",
+"source": "HF: mteb/amazon_massive_intent",
+"url": "https://huggingface.co/datasets/mteb/amazon_massive_intent",
+"tasks": [
+"intent"
+],
+"rows": "11.514 / 2.033 / 2.974",
+"classes": 60,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": 279909,
+"lang": "id",
+"language": "id",
+"chars": "Ucapan asisten suara berbahasa Indonesia, sangat pendek.",
+"download": {
+"type": "hf",
+"repo": "mteb/amazon_massive_intent",
+"config": "id"
+},
+"local": true
+},
+{
+"key": "wikipedia_id",
+"name": "Wikipedia Indonesia",
+"source": "HF: wikimedia/wikipedia",
+"url": "https://huggingface.co/datasets/wikimedia/wikipedia",
+"tasks": [
+"topic",
+"repr",
+"nextword"
+],
+"rows": "665.622 artikel",
+"classes": null,
+"license": "CC-BY-SA-3.0, GFDL",
+"licenseOk": true,
+"bytes": 583801799,
+"lang": "id",
+"language": "id",
+"chars": "Tanpa label. Korpus untuk melatih Word2Vec/FastText, n-gram, dan uji skala. Ambil sampel.",
+"download": {
+"type": "hf",
+"repo": "wikimedia/wikipedia",
+"config": "20231101.id"
+},
+"local": false
+},
+{
+"key": "id_hoax",
+"name": "ID Hoax Report",
+"source": "HF: nlp-brin-id/id-hoax-report",
+"url": "https://huggingface.co/datasets/nlp-brin-id/id-hoax-report",
+"tasks": [
+"fakenews"
+],
+"rows": "Belum diverifikasi",
+"classes": null,
+"license": "MIT",
+"licenseOk": true,
+"bytes": null,
+"lang": "id",
+"language": "id",
+"chars": "Laporan hoaks dari beberapa sumber. File meminta autentikasi saat diperiksa pada 5 Nov 2026.",
+"download": {
+"type": "manual",
+"note": "Login Hugging Face lalu unduh file CSV manual."
+},
+"local": false
+},
+{
+"key": "xlsum",
+"name": "XL-Sum (Indonesia)",
+"source": "HF: csebuetnlp/xlsum",
+"url": "https://huggingface.co/datasets/csebuetnlp/xlsum",
+"tasks": [
+"summarization"
+],
+"rows": "Belum diverifikasi",
+"classes": null,
+"license": "CC-BY-NC-SA-4.0",
+"licenseOk": false,
+"bytes": null,
+"lang": "multi",
+"language": "multi",
+"chars": "Berita BBC multibahasa dengan ringkasan. Repo berbasis script: `load_dataset` versi baru gagal.",
+"download": {
+"type": "manual",
+"note": "Unduh arsip dari github.com/csebuetnlp/xl-sum."
+},
+"local": false
+},
+{
+"key": "ag_news",
+"name": "AG News",
+"source": "HF: fancyzhx/ag_news",
+"url": "https://huggingface.co/datasets/fancyzhx/ag_news",
+"tasks": [
+"multiclass",
+"topic",
+"doc_cluster",
+"emb_cluster",
+"dimred",
+"pseudo",
+"confidence",
+"iterative",
+"weak",
+"keyword"
+],
+"rows": "120.000 / 7.600",
+"classes": 4,
+"license": "Unknown",
+"licenseOk": null,
+"bytes": 19820267,
+"lang": "en",
+"language": "en",
+"chars": "Berita pendek empat kategori, seimbang. Pilihan bagus untuk uji pipeline apa pun.",
+"download": {
+"type": "hf",
+"repo": "fancyzhx/ag_news"
+},
+"local": true
+},
+{
+"key": "imdb",
+"name": "IMDB",
+"source": "HF: stanfordnlp/imdb",
+"url": "https://huggingface.co/datasets/stanfordnlp/imdb",
+"tasks": [
+"binary",
+"repr",
+"pseudo",
+"selftrain"
+],
+"rows": "25.000 / 25.000, plus 50.000 tanpa label",
+"classes": 2,
+"license": "Other",
+"licenseOk": null,
+"bytes": 83446840,
+"lang": "en",
+"language": "en",
+"chars": "Ulasan film panjang. Split `unsupervised` cocok untuk uji semi-supervised.",
+"download": {
+"type": "hf",
+"repo": "stanfordnlp/imdb"
+},
+"local": false
+},
+{
+"key": "yelp_polarity",
+"name": "Yelp Polarity",
+"source": "HF: fancyzhx/yelp_polarity",
+"url": "https://huggingface.co/datasets/fancyzhx/yelp_polarity",
+"tasks": [
+"binary"
+],
+"rows": "560.000 / 38.000",
+"classes": 2,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 273803261,
+"lang": "en",
+"language": "en",
+"chars": "Skala sesuai batas lomba. Seimbang. Pakai untuk uji RAM dan waktu pada ±500 ribu baris.",
+"download": {
+"type": "hf",
+"repo": "fancyzhx/yelp_polarity"
+},
+"local": false
+},
+{
+"key": "amazon_polarity",
+"name": "Amazon Polarity",
+"source": "HF: fancyzhx/amazon_polarity",
+"url": "https://huggingface.co/datasets/fancyzhx/amazon_polarity",
+"tasks": [
+"binary"
+],
+"rows": "3.600.000 / 400.000",
+"classes": 2,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": 1145430497,
+"lang": "en",
+"language": "en",
+"chars": "Sangat besar: ambil sampel 500 ribu. Ada `title` dan `content`.",
+"download": {
+"type": "hf",
+"repo": "fancyzhx/amazon_polarity"
+},
+"local": false
+},
+{
+"key": "dbpedia14",
+"name": "DBpedia 14",
+"source": "HF: fancyzhx/dbpedia_14",
+"url": "https://huggingface.co/datasets/fancyzhx/dbpedia_14",
+"tasks": [
+"multiclass"
+],
+"rows": "560.000 / 70.000",
+"classes": 14,
+"license": "CC-BY-SA-3.0",
+"licenseOk": true,
+"bytes": 119424374,
+"lang": "en",
+"language": "en",
+"chars": "Skala sesuai batas lomba, 14 kelas seimbang. Ada `title` dan `content`.",
+"download": {
+"type": "hf",
+"repo": "fancyzhx/dbpedia_14"
+},
+"local": false
+},
+{
+"key": "yahoo_answers",
+"name": "Yahoo Answers Topics",
+"source": "HF: community-datasets/yahoo_answers_topics",
+"url": "https://huggingface.co/datasets/community-datasets/yahoo_answers_topics",
+"tasks": [
+"multiclass",
+"doc_cluster"
+],
+"rows": "1.400.000 / 60.000",
+"classes": 10,
+"license": "Unknown",
+"licenseOk": null,
+"bytes": 533429663,
+"lang": "en",
+"language": "en",
+"chars": "Pertanyaan dan jawaban per topik. Ada tiga kolom teks. Ambil sampel.",
+"download": {
+"type": "hf",
+"repo": "community-datasets/yahoo_answers_topics"
+},
+"local": false
+},
+{
+"key": "newsgroups20",
+"name": "20 Newsgroups",
+"source": "HF: SetFit/20_newsgroups",
+"url": "https://huggingface.co/datasets/SetFit/20_newsgroups",
+"tasks": [
+"multiclass",
+"topic",
+"doc_cluster",
+"dimred"
+],
+"rows": "11.314 / 7.532",
+"classes": 20,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 23717616,
+"lang": "en",
+"language": "en",
+"chars": "Klasik untuk topik dan klaster. Header dan kutipan bisa menjadi kebocoran.",
+"download": {
+"type": "hf",
+"repo": "SetFit/20_newsgroups"
+},
+"local": true
+},
+{
+"key": "go_emotions",
+"name": "GoEmotions",
+"source": "HF: google-research-datasets/go_emotions",
+"url": "https://huggingface.co/datasets/google-research-datasets/go_emotions",
+"tasks": [
+"multilabel"
+],
+"rows": "43.410 / 5.426 / 5.427",
+"classes": 28,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": 3464371,
+"lang": "en",
+"language": "en",
+"chars": "Komentar Reddit dengan banyak label emosi. Label tidak seimbang.",
+"download": {
+"type": "hf",
+"repo": "google-research-datasets/go_emotions",
+"config": "simplified"
+},
+"local": true
+},
+{
+"key": "civil_comments",
+"name": "Civil Comments",
+"source": "HF: google/civil_comments",
+"url": "https://huggingface.co/datasets/google/civil_comments",
+"tasks": [
+"multilabel",
+"regression"
+],
+"rows": "1.804.874 / 97.320 / 97.320",
+"classes": 7,
+"license": "CC0-1.0",
+"licenseOk": true,
+"bytes": 422061071,
+"lang": "en",
+"language": "en",
+"chars": "Skor kontinu 0–1 untuk 7 atribut. Ubah ke label dengan threshold, atau langsung regresi. Sangat imbalanced.",
+"download": {
+"type": "hf",
+"repo": "google/civil_comments"
+},
+"local": false
+},
+{
+"key": "yelp_full",
+"name": "Yelp Review Full",
+"source": "HF: Yelp/yelp_review_full",
+"url": "https://huggingface.co/datasets/Yelp/yelp_review_full",
+"tasks": [
+"regression"
+],
+"rows": "650.000 / 50.000",
+"classes": 5,
+"license": "Other",
+"licenseOk": null,
+"bytes": 322952369,
+"lang": "en",
+"language": "en",
+"chars": "Rating 1–5: uji regresi atau ordinal.",
+"download": {
+"type": "hf",
+"repo": "Yelp/yelp_review_full"
+},
+"local": false
+},
+{
+"key": "sentiment140",
+"name": "Sentiment140",
+"source": "HF: stanfordnlp/sentiment140",
+"url": "https://huggingface.co/datasets/stanfordnlp/sentiment140",
+"tasks": [
+"sentiment"
+],
+"rows": "1,6 juta (kartu dataset, belum diverifikasi API)",
+"classes": 2,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": null,
+"lang": "en",
+"language": "en",
+"chars": "Tweet dengan label dari emotikon. Repo berbasis script: `load_dataset` versi baru gagal.",
+"download": {
+"type": "manual",
+"note": "Unduh CSV dari sumber asli di kartu dataset."
+},
+"local": false
+},
+{
+"key": "multi_senti",
+"name": "Multilingual Sentiments",
+"source": "HF: tyqiangz/multilingual-sentiments",
+"url": "https://huggingface.co/datasets/tyqiangz/multilingual-sentiments",
+"tasks": [
+"sentiment"
+],
+"rows": "270.399 / 10.857 / 14.465",
+"classes": 3,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": 71746646,
+"lang": "multi",
+"language": "multi",
+"chars": "12 bahasa dan `source`. Config `indonesian` berjumlah sama dengan SMSA (11.000/1.260/500). Bagus untuk uji group split per sumber.",
+"download": {
+"type": "hf",
+"repo": "tyqiangz/multilingual-sentiments",
+"config": "all"
+},
+"local": false
+},
+{
+"key": "sms_spam",
+"name": "SMS Spam Collection",
+"source": "HF: ucirvine/sms_spam",
+"url": "https://huggingface.co/datasets/ucirvine/sms_spam",
+"tasks": [
+"spam",
+"weak"
+],
+"rows": "5.574",
+"classes": 2,
+"license": "Unknown",
+"licenseOk": null,
+"bytes": 358869,
+"lang": "en",
+"language": "en",
+"chars": "Kecil dan sedikit imbalance. Duplikat cukup banyak: uji dedup.",
+"download": {
+"type": "hf",
+"repo": "ucirvine/sms_spam"
+},
+"local": true
+},
+{
+"key": "enron_spam",
+"name": "Enron Spam",
+"source": "HF: SetFit/enron_spam",
+"url": "https://huggingface.co/datasets/SetFit/enron_spam",
+"tasks": [
+"spam",
+"anomaly"
+],
+"rows": "31.716 / 2.000",
+"classes": 2,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 107342656,
+"lang": "en",
+"language": "en",
+"chars": "Email panjang dengan `subject`, `message`, `date`. Cocok untuk uji time split.",
+"download": {
+"type": "hf",
+"repo": "SetFit/enron_spam"
+},
+"local": false
+},
+{
+"key": "fake_news_gonzalo",
+"name": "Fake News (GonzaloA)",
+"source": "HF: GonzaloA/fake_news",
+"url": "https://huggingface.co/datasets/GonzaloA/fake_news",
+"tasks": [
+"fakenews"
+],
+"rows": "24.353 / 8.117 / 8.117",
+"classes": 2,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 64821337,
+"lang": "en",
+"language": "en",
+"chars": "Waspadai artefak sumber seperti kata 'Reuters'. Latihan bagus untuk pemeriksaan kata pembeda.",
+"download": {
+"type": "hf",
+"repo": "GonzaloA/fake_news"
+},
+"local": false
+},
+{
+"key": "liar",
+"name": "LIAR2",
+"source": "HF: chengxuphd/liar2",
+"url": "https://huggingface.co/datasets/chengxuphd/liar2",
+"tasks": [
+"fakenews"
+],
+"rows": "18.369 / 2.297 / 2.296",
+"classes": 6,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": null,
+"lang": "en",
+"language": "en",
+"chars": "Klaim politik enam tingkat kebenaran, dengan metadata pembicara. Pengganti LIAR lama yang berbasis script.",
+"download": {
+"type": "hf",
+"repo": "chengxuphd/liar2"
+},
+"local": false
+},
+{
+"key": "banking77",
+"name": "Banking77",
+"source": "HF: PolyAI/banking77",
+"url": "https://huggingface.co/datasets/PolyAI/banking77",
+"tasks": [
+"intent",
+"emb_cluster",
+"selftrain"
+],
+"rows": "10.003 / 3.080",
+"classes": 77,
+"license": "CC-BY-4.0",
+"licenseOk": true,
+"bytes": 385962,
+"lang": "en",
+"language": "en",
+"chars": "Banyak kelas dengan sampel per kelas sedikit.",
+"download": {
+"type": "hf",
+"repo": "PolyAI/banking77"
+},
+"local": true
+},
+{
+"key": "clinc_oos",
+"name": "CLINC150 OOS",
+"source": "HF: clinc/clinc_oos",
+"url": "https://huggingface.co/datasets/clinc/clinc_oos",
+"tasks": [
+"intent",
+"anomaly"
+],
+"rows": "15.250 / 3.100 / 5.500",
+"classes": 151,
+"license": "CC-BY-3.0",
+"licenseOk": true,
+"bytes": 525729,
+"lang": "en",
+"language": "en",
+"chars": "150 intent + out-of-scope. Baik untuk deteksi di luar lingkup.",
+"download": {
+"type": "hf",
+"repo": "clinc/clinc_oos",
+"config": "plus"
+},
+"local": true
+},
+{
+"key": "snli",
+"name": "SNLI",
+"source": "HF: stanfordnlp/snli",
+"url": "https://huggingface.co/datasets/stanfordnlp/snli",
+"tasks": [
+"pair"
+],
+"rows": "550.152 / 10.000 / 10.000",
+"classes": 3,
+"license": "CC-BY-SA-4.0",
+"licenseOk": true,
+"bytes": 20439300,
+"lang": "en",
+"language": "en",
+"chars": "Skala besar. Label −1 (785 baris di train) berarti tanpa konsensus: buang dulu.",
+"download": {
+"type": "hf",
+"repo": "stanfordnlp/snli"
+},
+"local": true
+},
+{
+"key": "multi_nli",
+"name": "MultiNLI",
+"source": "HF: nyu-mll/multi_nli",
+"url": "https://huggingface.co/datasets/nyu-mll/multi_nli",
+"tasks": [
+"pair"
+],
+"rows": "392.702 / 9.815 / 9.832",
+"classes": 3,
+"license": "Campuran (CC, MIT, lainnya)",
+"licenseOk": null,
+"bytes": 224005223,
+"lang": "en",
+"language": "en",
+"chars": "Validasi matched dan mismatched memberi simulasi domain shift.",
+"download": {
+"type": "hf",
+"repo": "nyu-mll/multi_nli"
+},
+"local": false
+},
+{
+"key": "paws",
+"name": "PAWS",
+"source": "HF: google-research-datasets/paws",
+"url": "https://huggingface.co/datasets/google-research-datasets/paws",
+"tasks": [
+"pair",
+"doc_sim",
+"dupq"
+],
+"rows": "49.401 / 8.000 / 8.000",
+"classes": 2,
+"license": "Other",
+"licenseOk": null,
+"bytes": 10899391,
+"lang": "en",
+"language": "en",
+"chars": "Pasangan parafrase adversarial dengan overlap kata tinggi. Bag-of-words sulit menang.",
+"download": {
+"type": "hf",
+"repo": "google-research-datasets/paws",
+"config": "labeled_final"
+},
+"local": true
+},
+{
+"key": "quora_dup",
+"name": "Quora Duplicates",
+"source": "HF: sentence-transformers/quora-duplicates",
+"url": "https://huggingface.co/datasets/sentence-transformers/quora-duplicates",
+"tasks": [
+"dupq",
+"pair",
+"doc_sim"
+],
+"rows": "404.290",
+"classes": 2,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 34965546,
+"lang": "en",
+"language": "en",
+"chars": "Pertanyaan berulang di banyak pasangan: pakai group fold.",
+"download": {
+"type": "hf",
+"repo": "sentence-transformers/quora-duplicates",
+"config": "pair-class"
+},
+"local": true
+},
+{
+"key": "stsb",
+"name": "STS Benchmark",
+"source": "HF: sentence-transformers/stsb",
+"url": "https://huggingface.co/datasets/sentence-transformers/stsb",
+"tasks": [
+"semsim",
+"regression",
+"doc_sim"
+],
+"rows": "5.749 / 1.500 / 1.379",
+"classes": null,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 720899,
+"lang": "en",
+"language": "en",
+"chars": "Skor kemiripan kontinu dua kalimat.",
+"download": {
+"type": "hf",
+"repo": "sentence-transformers/stsb"
+},
+"local": true
+},
+{
+"key": "ms_marco",
+"name": "MS MARCO v1.1",
+"source": "HF: microsoft/ms_marco",
+"url": "https://huggingface.co/datasets/microsoft/ms_marco",
+"tasks": [
+"ranking",
+"ir"
+],
+"rows": "82.326 / 10.047 / 9.650 query",
+"classes": null,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 217328153,
+"lang": "en",
+"language": "en",
+"chars": "Query dengan kandidat passage dan flag relevan. v2.1 berukuran 2,1 GB.",
+"download": {
+"type": "hf",
+"repo": "microsoft/ms_marco",
+"config": "v1.1"
+},
+"local": false
+},
+{
+"key": "scifact",
+"name": "SciFact (BeIR)",
+"source": "HF: BeIR/scifact",
+"url": "https://huggingface.co/datasets/BeIR/scifact",
+"tasks": [
+"ir",
+"ranking"
+],
+"rows": "5.183 dokumen, 1.109 query",
+"classes": null,
+"license": "CC-BY-SA-4.0",
+"licenseOk": true,
+"bytes": 4469916,
+"lang": "en",
+"language": "en",
+"chars": "Kecil untuk uji retrieval. Qrels di `BeIR/scifact-qrels` (919 / 339).",
+"download": {
+"type": "hf",
+"repo": "BeIR/scifact",
+"config": "corpus"
+},
+"local": false
+},
+{
+"key": "conll2003",
+"name": "CoNLL-2003",
+"source": "HF: lhoestq/conll2003",
+"url": "https://huggingface.co/datasets/lhoestq/conll2003",
+"tasks": [
+"ner"
+],
+"rows": "14.041 / 3.250 / 3.453",
+"classes": 9,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 1611685,
+"lang": "en",
+"language": "en",
+"chars": "Standar NER. Mirror parquet. Repo `eriktks/conll2003` berbasis script dan gagal pada `datasets` baru.",
+"download": {
+"type": "hf",
+"repo": "lhoestq/conll2003"
+},
+"local": true
+},
+{
+"key": "ontonotes",
+"name": "OntoNotes 5",
+"source": "HF: tner/ontonotes5",
+"url": "https://huggingface.co/datasets/tner/ontonotes5",
+"tasks": [
+"ner"
+],
+"rows": "59.924 / 8.528 / 8.262",
+"classes": 37,
+"license": "Other",
+"licenseOk": null,
+"bytes": 17486974,
+"lang": "en",
+"language": "en",
+"chars": "Banyak tipe entitas, lebih besar dari CoNLL.",
+"download": {
+"type": "hf",
+"repo": "tner/ontonotes5"
+},
+"local": false
+},
+{
+"key": "cnn_dailymail",
+"name": "CNN/DailyMail",
+"source": "HF: abisee/cnn_dailymail",
+"url": "https://huggingface.co/datasets/abisee/cnn_dailymail",
+"tasks": [
+"summarization"
+],
+"rows": "287.113 / 13.368 / 11.490",
+"classes": null,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": 837094602,
+"lang": "en",
+"language": "en",
+"chars": "Berita panjang dengan ringkasan poin. Uji Lead-N dan TextRank, gunakan sampel.",
+"download": {
+"type": "hf",
+"repo": "abisee/cnn_dailymail",
+"config": "2.0.0"
+},
+"local": false
+},
+{
+"key": "dialogsum",
+"name": "DialogSum",
+"source": "HF: knkarthick/dialogsum",
+"url": "https://huggingface.co/datasets/knkarthick/dialogsum",
+"tasks": [
+"summarization"
+],
+"rows": "12.460 / 500 / 1.500",
+"classes": null,
+"license": "CC-BY-NC-SA-4.0",
+"licenseOk": false,
+"bytes": 13116556,
+"lang": "en",
+"language": "en",
+"chars": "Ringkasan dialog.",
+"download": {
+"type": "hf",
+"repo": "knkarthick/dialogsum"
+},
+"local": false
+},
+{
+"key": "lang_id",
+"name": "Language Identification",
+"source": "HF: papluca/language-identification",
+"url": "https://huggingface.co/datasets/papluca/language-identification",
+"tasks": [
+"langdetect"
+],
+"rows": "70.000 / 10.000 / 10.000",
+"classes": 20,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 15343011,
+"lang": "multi",
+"language": "multi",
+"chars": "20 bahasa, seimbang.",
+"download": {
+"type": "hf",
+"repo": "papluca/language-identification"
+},
+"local": true
+},
+{
+"key": "wili",
+"name": "WiLI-2018",
+"source": "HF: MartinThoma/wili_2018",
+"url": "https://huggingface.co/datasets/MartinThoma/wili_2018",
+"tasks": [
+"langdetect"
+],
+"rows": "117.500 / 117.500",
+"classes": 235,
+"license": "ODbL",
+"licenseOk": true,
+"bytes": 91718265,
+"lang": "multi",
+"language": "multi",
+"chars": "235 bahasa dari Wikipedia. Menguji model dengan banyak kelas.",
+"download": {
+"type": "hf",
+"repo": "MartinThoma/wili_2018"
+},
+"local": false
+},
+{
+"key": "casa",
+"name": "IndoNLU CASA (ABSA)",
+"source": "GitHub: IndoNLP/indonlu",
+"url": "https://github.com/IndoNLP/indonlu",
+"tasks": [
+"absa"
+],
+"rows": "810 / 90 / 180",
+"classes": 3,
+"license": "Lihat repo (LICENSE Apache-2.0; HF: MIT)",
+"licenseOk": true,
+"bytes": 145129,
+"lang": "id",
+"language": "id",
+"chars": "Ulasan mobil, kolom per aspek: fuel, machine, others, part, price, service. Bernilai positive/neutral/negative.",
+"download": {
+"type": "files",
+"files": {
+"train.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/casa_absa-prosa/train_preprocess.csv",
+"valid.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/casa_absa-prosa/valid_preprocess.csv",
+"test.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/casa_absa-prosa/test_preprocess.csv"
+}
+},
+"local": true
+},
+{
+"key": "hoasa",
+"name": "IndoNLU HoASA (ABSA)",
+"source": "GitHub: IndoNLP/indonlu",
+"url": "https://github.com/IndoNLP/indonlu",
+"tasks": [
+"absa"
+],
+"rows": "2.283 / 285 / 286",
+"classes": 10,
+"license": "Lihat repo (LICENSE Apache-2.0; HF: MIT)",
+"licenseOk": true,
+"bytes": 476752,
+"lang": "id",
+"language": "id",
+"chars": "Ulasan hotel, 10 kolom aspek. Baik untuk uji aspek jarang.",
+"download": {
+"type": "files",
+"files": {
+"train.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/hoasa_absa-airy/train_preprocess.csv",
+"valid.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/hoasa_absa-airy/valid_preprocess.csv",
+"test.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/hoasa_absa-airy/test_preprocess.csv"
+}
+},
+"local": true
+},
+{
+"key": "facqa",
+"name": "IndoNLU FacQA (QA faktoid)",
+"source": "GitHub: IndoNLP/indonlu",
+"url": "https://github.com/IndoNLP/indonlu",
+"tasks": [
+"qa"
+],
+"rows": "2.495 / 311 / 311",
+"classes": null,
+"license": "Lihat repo (LICENSE Apache-2.0; HF: MIT)",
+"licenseOk": true,
+"bytes": 2591968,
+"lang": "id",
+"language": "id",
+"chars": "Pertanyaan faktoid Indonesia. Format list token dan `seq_label` BIO, bukan offset.",
+"download": {
+"type": "files",
+"files": {
+"train.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/facqa_qa-factoid-itb/train_preprocess.csv",
+"valid.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/facqa_qa-factoid-itb/valid_preprocess.csv",
+"test.csv": "https://raw.githubusercontent.com/IndoNLP/indonlu/master/dataset/facqa_qa-factoid-itb/test_preprocess.csv"
+}
+},
+"local": true
+},
+{
+"key": "squad",
+"name": "SQuAD v1",
+"source": "HF: rajpurkar/squad",
+"url": "https://huggingface.co/datasets/rajpurkar/squad",
+"tasks": [
+"qa"
+],
+"rows": "87.599 / 10.570",
+"classes": null,
+"license": "CC-BY-SA-4.0",
+"licenseOk": true,
+"bytes": 16278203,
+"lang": "en",
+"language": "en",
+"chars": "Standar format QA. Uji pipeline span dan decode.",
+"download": {
+"type": "hf",
+"repo": "rajpurkar/squad"
+},
+"local": true
+},
+{
+"key": "tydiqa",
+"name": "TyDi QA (secondary task)",
+"source": "HF: google-research-datasets/tydiqa",
+"url": "https://huggingface.co/datasets/google-research-datasets/tydiqa",
+"tasks": [
+"qa"
+],
+"rows": "49.881 / 5.077",
+"classes": null,
+"license": "Apache-2.0",
+"licenseOk": true,
+"bytes": 29402238,
+"lang": "multi",
+"language": "multi",
+"chars": "Multibahasa, termasuk Indonesia, format seperti SQuAD. Saring baris Indonesia dari `id`.",
+"download": {
+"type": "hf",
+"repo": "google-research-datasets/tydiqa",
+"config": "secondary_task"
+},
+"local": true
+},
+{
+"key": "mbg_x",
+"name": "MBG X berlabel manual",
+"source": "HF: tasyapndya/free_nutritious_meals_sentiment_x_id_2025",
+"url": "https://huggingface.co/datasets/tasyapndya/free_nutritious_meals_sentiment_x_id_2025",
+"tasks": [
+"sentiment",
+"stance",
+"report"
+],
+"rows": "1.102",
+"classes": null,
+"license": "Tidak tercantum",
+"licenseOk": null,
+"bytes": 169415,
+"lang": "id",
+"language": "id",
+"chars": "Item H11 di bundle. Satu-satunya data MBG berlabel manual di daftar. Pakai saat lomba hanya bila data eksternal diizinkan.",
+"download": {
+"type": "hf",
+"repo": "tasyapndya/free_nutritious_meals_sentiment_x_id_2025"
+},
+"local": true
+}
+];
+TK.catalogNote = "Baris, ukuran, dan lisensi diperiksa ke API Hugging Face dan GitHub pada 5 Nov 2026. Baris ditulis train / validasi / test bila ada. Ini dataset latihan, bukan prediksi dataset lomba.";

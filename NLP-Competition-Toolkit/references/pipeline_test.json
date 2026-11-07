@@ -1,0 +1,134 @@
+{
+ "classification": {
+  "ok": true,
+  "detik": 481.0,
+  "sel": 14,
+  "bert": false
+ },
+ "classification_binary": {
+  "ok": true,
+  "detik": 462.1,
+  "sel": 14,
+  "bert": false
+ },
+ "multilabel": {
+  "ok": true,
+  "detik": 150.2,
+  "sel": 12,
+  "bert": false
+ },
+ "absa": {
+  "ok": true,
+  "detik": 37.2,
+  "sel": 8,
+  "bert": false
+ },
+ "regression": {
+  "ok": true,
+  "detik": 50.3,
+  "sel": 12,
+  "bert": false
+ },
+ "pair": {
+  "ok": true,
+  "detik": 48.4,
+  "sel": 11,
+  "bert": false
+ },
+ "semsim": {
+  "ok": true,
+  "detik": 29.2,
+  "sel": 6,
+  "bert": false
+ },
+ "retrieval": {
+  "ok": true,
+  "detik": 29.3,
+  "sel": 7,
+  "bert": false
+ },
+ "topic": {
+  "ok": true,
+  "detik": 35.1,
+  "sel": 8,
+  "bert": false
+ },
+ "cluster": {
+  "ok": true,
+  "detik": 28.3,
+  "sel": 8,
+  "bert": false
+ },
+ "keyword": {
+  "ok": true,
+  "detik": 28.4,
+  "sel": 5,
+  "bert": false
+ },
+ "report": {
+  "ok": true,
+  "detik": 27.5,
+  "sel": 8,
+  "bert": false
+ },
+ "weak": {
+  "ok": true,
+  "detik": 12.3,
+  "sel": 7,
+  "bert": false
+ },
+ "semi": {
+  "ok": true,
+  "detik": 6.3,
+  "sel": 6,
+  "bert": false
+ },
+ "ner": {
+  "ok": true,
+  "detik": 63.9,
+  "sel": 7,
+  "bert": false
+ },
+ "qa": {
+  "ok": true,
+  "detik": 116.4,
+  "sel": 6,
+  "bert": false
+ },
+ "summarization": {
+  "ok": true,
+  "detik": 101.5,
+  "sel": 6,
+  "bert": false
+ },
+ "seq2seq_task": {
+  "ok": true,
+  "detik": 119.0,
+  "sel": 5,
+  "bert": false
+ },
+ "nextword": {
+  "ok": true,
+  "detik": 49.5,
+  "sel": 5,
+  "bert": false
+ },
+ "anomaly": {
+  "ok": true,
+  "detik": 14.3,
+  "sel": 6,
+  "bert": false
+ },
+ "extract": {
+  "ok": true,
+  "detik": 19.5,
+  "sel": 10,
+  "bert": false
+ },
+ "classification_mbg": {
+  "ok": true,
+  "detik": 409.7,
+  "sel": 14,
+  "bert": false
+ }
+}
