@@ -1,0 +1,38 @@
+{
+ "task": "augmentasi",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 500,
+ "total_detik": 1757,
+ "gpu": true,
+ "tahap_detik": {
+  "back_translation": 336.8,
+  "tanpa_augmentasi": 182.6,
+  "hapus_kata": 338.1,
+  "tukar_kata": 338.9,
+  "slang": 339.4
+ },
+ "metrik": {
+  "dipilih": "tanpa_augmentasi",
+  "tanpa_augmentasi": {
+   "oof": 0.8336,
+   "holdout": 0.6265
+  },
+  "hapus_kata": {
+   "oof": 0.8406,
+   "holdout": 0.7916
+  },
+  "tukar_kata": {
+   "oof": 0.8502,
+   "holdout": 0.7946
+  },
+  "slang": {
+   "oof": 0.8518,
+   "holdout": 0.8005
+  },
+  "back_translation": {
+   "oof": 0.8454,
+   "holdout": 0.7577
+  }
+ }
+}

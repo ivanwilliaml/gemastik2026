@@ -1,0 +1,29 @@
+{
+ "task": "absa",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 2283,
+ "total_detik": 400,
+ "gpu": true,
+ "tahap_detik": {
+  "transformer": 374.5
+ },
+ "metrik": {
+  "semua_netral": {
+   "valid": 0.2943,
+   "test": 0.2956
+  },
+  "tfidf_per_aspek": {
+   "valid": 0.7166,
+   "test": 0.7117
+  },
+  "model_utama": {
+   "valid": 0.8191,
+   "test": 0.8494
+  },
+  "model_utama_plus_pengali": {
+   "valid": 0.8778,
+   "test": 0.8412
+  }
+ }
+}

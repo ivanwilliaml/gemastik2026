@@ -1,0 +1,38 @@
+{
+ "task": "multi_label",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 1875,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline_tfidf": 34.7,
+  "transformer": 1790.5
+ },
+ "metrik": {
+  "semua_negatif": {
+   "oof": 0.0,
+   "holdout": 0.0
+  },
+  "tfidf_lr": {
+   "oof": 0.6156,
+   "holdout": 0.6094
+  },
+  "model_utama": {
+   "oof": 0.6139,
+   "holdout": 0.6263
+  },
+  "tfidf_plus_threshold": {
+   "oof": 0.6183,
+   "holdout": 0.61
+  },
+  "transformer_plus_threshold": {
+   "oof": 0.6446,
+   "holdout": 0.6873
+  },
+  "rata_rata_plus_threshold": {
+   "oof": 0.6713,
+   "holdout": 0.6894
+  }
+ }
+}

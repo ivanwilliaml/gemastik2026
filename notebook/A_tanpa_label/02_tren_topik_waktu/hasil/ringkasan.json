@@ -1,0 +1,39 @@
+{
+ "task": "tren_topik_waktu",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 4460,
+ "total_detik": 98,
+ "gpu": true,
+ "tahap_detik": {
+  "sentimen": 78.0
+ },
+ "metrik": {
+  "k": 6,
+  "validasi_temporal": [
+   {
+    "k": 6,
+    "npmi_paruh_awal": -0.0155,
+    "npmi_paruh_akhir": -0.1174
+   },
+   {
+    "k": 8,
+    "npmi_paruh_awal": -0.0668,
+    "npmi_paruh_akhir": -0.2278
+   },
+   {
+    "k": 10,
+    "npmi_paruh_awal": -0.0435,
+    "npmi_paruh_akhir": -0.1679
+   },
+   {
+    "k": 12,
+    "npmi_paruh_awal": -0.0498,
+    "npmi_paruh_akhir": -0.1904
+   }
+  ],
+  "titik_perubahan": [
+   "2026-03-23"
+  ]
+ }
+}

@@ -1,0 +1,240 @@
+# %% [markdown]
+# # 16 POS Tagging
+#
+# Memberi kelas kata pada tiap token. Contoh: dataset POSP.
+
+# %% include toc
+
+# %% [markdown]
+# ## 1. Kartu Masalah
+#
+# | Bagian | Isi |
+# |---|---|
+# | **Task** | Memberi kelas kata |
+# | **Unit prediksi** | Tiap kata mendapat satu tag |
+# | **Metrik** | F1 mikro dan akurasi per token |
+# | **Masalah terbesar** | Baseline sudah sangat tinggi (0,954), jadi ruang perbaikan kecil. Kesalahan tersisa ada di kata benda, nama diri, dan label yang berisik. |
+# | **Data contoh** | POSP: 5.000 kalimat latih, 840 valid, 840 test, 26 label |
+
+# %% [markdown]
+# ## 2. Kapan Pakai Notebook Ini
+#
+# **Pakai kalau** soal meminta label kelas kata, atau label per token lain yang setiap tokennya berdiri sendiri. Metriknya biasanya akurasi atau macro-F1 token.
+#
+# **Yang perlu diganti kalau datanya beda:**
+# - `DATA_FOLDER`, atau `read_conll` kalau formatnya bukan satu token per baris.
+# - `MODEL_RUNS` di config. `indobert` untuk teks formal, `indobertweet` untuk media sosial.
+# - Kalau label bukan pola BIO, ganti metrik di bagian 6 dengan akurasi token.
+
+# %% [markdown]
+# ## 3. Config
+
+# %% include setup
+
+# %% [markdown]
+# **Pengaturan utama.** Semua yang perlu diubah ada di sel ini.
+
+# %%
+MODE = "cepat"  # "cepat" (<30 menit) atau "penuh" (<2 jam)
+USE_PRETRAINED = True  # False: hanya baseline fitur per token, tanpa file model dari luar
+SEED = 42
+N_ROWS = 5000
+DATA_FOLDER = "posp_pos-prosa"
+
+SETTINGS = {
+    "cepat": {"epochs": 3, "model_runs": [("indobert", SEED)]},
+    "penuh": {"epochs": 6, "model_runs": [("indobert", SEED), ("indobert", SEED + 1), ("indobert", SEED + 2)]},
+}[MODE]
+
+seed_everything(SEED)
+print(SETTINGS)
+
+# %% include transformer_tokencls
+
+# %% [markdown]
+# ## 4. EDA
+#
+# Muat train, valid, dan test. Test berperan sebagai holdout dan hanya dipakai untuk laporan.
+
+# %%
+folder = EXTRA_DATA_DIR / "indonlu/dataset" / DATA_FOLDER
+train = read_conll(folder / "train_preprocess.txt")
+valid = read_conll(folder / "valid_preprocess.txt")
+test = read_conll(folder / "test_preprocess.txt")
+train = train[: N_ROWS]
+print(f"kalimat latih={len(train)} | valid={len(valid)} | test={len(test)}")
+print("contoh:", list(zip(*train[0]))[:8])
+
+# %% [markdown]
+# Distribusi label, panjang kalimat, dan kata yang tidak pernah muncul di data latih.
+
+# %%
+from collections import Counter  # noqa: E402
+
+tag_counts = Counter(tag for _, tags in train for tag in tags)
+lengths = pd.Series([len(tokens) for tokens, _ in train])
+train_vocab = {w.lower() for tokens, _ in train for w in tokens}
+test_words = [w.lower() for tokens, _ in test for w in tokens]
+unseen = np.mean([w not in train_vocab for w in test_words])
+truncated = float((lengths > 120).mean())
+print(f"panjang kalimat median={lengths.median():.0f} | p95={lengths.quantile(0.95):.0f} | maks={lengths.max()}")
+print(f"kata test yang tidak ada di latih: {unseen:.1%} | kalimat terpotong pada 120 token: {truncated:.1%}")
+
+tag_table = pd.Series(tag_counts).sort_values()
+fig, ax = plt.subplots(figsize=(8, max(3, 0.25 * len(tag_table))))
+tag_table.plot.barh(ax=ax, color="#4C72B0", logx=True)
+ax.set(title="Jumlah token per label", xlabel="jumlah token (log)", ylabel="label")
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
+# **Temuan dan keputusan**
+#
+# | Temuan | Keputusan |
+# |---|---|
+# | 7,4% kata test baru | Transformer dipakai untuk kata baru |
+# | Teks sudah huruf kecil semua | Petunjuk kapitalisasi tidak tersedia |
+# | Tidak ada kalimat terpotong | Batas 120 token cukup |
+
+# %% [markdown]
+# ## 5. Preprocessing
+#
+# Data sudah berupa token. Huruf besar dan tanda baca **tidak** diubah, karena sering menjadi petunjuk
+# kuat. Pembagian subtoken dan penyelarasan label dikerjakan oleh `encode_tokens`.
+
+# %%
+labels = sorted({tag for _, tags in train + valid + test for tag in tags})
+y_valid = [tags for _, tags in valid]
+y_test = [tags for _, tags in test]
+print(f"jumlah label: {len(labels)}")
+
+# %% [markdown]
+# ## 6. Validasi
+#
+# Dataset sudah menyediakan split valid dan test. Pemilihan model memakai valid, dan test hanya untuk laporan.
+# Metrik utamanya F1 span, dan karena tiap token berlabel `B-` nilainya setara dengan F1 mikro per token.
+
+# %%
+results: list[dict] = []
+
+
+def record(name: str, pred_valid, pred_test) -> None:
+    valid_scores = span_scores(y_valid, pred_valid)
+    test_scores = span_scores(y_test, pred_test)
+    results.append(
+        {"model": name, "f1_valid": valid_scores["f1"], "f1_test": test_scores["f1"],
+          "precision_test": test_scores["precision"], "recall_test": test_scores["recall"]}
+    )
+    print(results[-1])
+
+
+# %% [markdown]
+# ## 7. Baseline
+#
+# Regresi logistik per token dengan fitur kata. Sering sudah cukup kuat untuk label yang mudah.
+
+# %%
+with stage("baseline"):
+    base_valid, base_test = token_baseline(train, valid), token_baseline(train, test)
+record("baseline_fitur", base_valid, base_test)
+
+# %% [markdown]
+# ## 8. Model Utama
+#
+# Transformer token classification. Di mode penuh beberapa seed digabung dengan suara terbanyak per token.
+
+# %%
+def majority_vote(all_preds: list[list[list[str]]]) -> list[list[str]]:
+    voted = []
+    for sentence_preds in zip(*all_preds):
+        voted.append([Counter(tags).most_common(1)[0][0] for tags in zip(*sentence_preds)])
+    return voted
+
+
+with stage("transformer"):
+    runs_valid, runs_test = [], []
+    if USE_PRETRAINED:
+        for model_name, seed in SETTINGS["model_runs"]:
+            pred_valid, pred_test = train_token_model(
+                model_name, train, [valid, test], labels, SETTINGS["epochs"], seed
+            )
+            runs_valid.append(pred_valid)
+            runs_test.append(pred_test)
+        main_valid, main_test = majority_vote(runs_valid), majority_vote(runs_test)
+    else:
+        main_valid, main_test = base_valid, base_test
+record("model_utama", main_valid, main_test)
+
+# %% [markdown]
+# ## 9. Post-processing
+#
+# Perbaiki urutan BIO yang tidak sah. Tanpa ini, label `I-` tanpa awalan bisa menghapus entitas.
+
+# %%
+final_valid = [repair_bio(tags) for tags in main_valid]
+final_test = [repair_bio(tags) for tags in main_test]
+record("model_utama_plus_perbaikan_bio", final_valid, final_test)
+
+# %% [markdown]
+# ## 10. Post-analysis
+#
+# **Tabel perbandingan.**
+
+# %%
+result_table = pd.DataFrame(results)
+result_table.to_csv(RESULT_DIR / "perbandingan.csv", index=False)
+result_table
+
+# %% [markdown]
+# **Skor per jenis.** Jenis mana yang paling lemah.
+
+# %%
+def per_type_scores(true_seqs, pred_seqs) -> pd.DataFrame:
+    def kind_of(tag: str) -> str:
+        return "O" if tag == "O" else (tag.partition("-")[2] or "frasa")
+
+    def keep_only(seq: list[str], kind: str) -> list[str]:
+        return [t if kind_of(t) == kind else "O" for t in seq]
+
+    kinds = sorted({kind_of(tag) for tags in true_seqs for tag in tags} - {"O"})
+    rows = []
+    for kind in kinds:
+        scores = span_scores([keep_only(s, kind) for s in true_seqs], [keep_only(s, kind) for s in pred_seqs])
+        support = sum(len(extract_spans(keep_only(s, kind))) for s in true_seqs)
+        rows.append({"jenis": kind, "jumlah": support, **scores})
+    return pd.DataFrame(rows).sort_values("jumlah", ascending=False).head(30)
+
+
+per_type_scores(y_test, final_test)
+
+# %% [markdown]
+# **Contoh kalimat yang salah.**
+
+# %%
+rows = []
+for (tokens, _), truth, pred in zip(test, y_test, final_test):
+    if truth != pred:
+        rows.append({"teks": " ".join(tokens)[:80],
+                     "asli": sorted(extract_spans(truth))[:3], "prediksi": sorted(extract_spans(pred))[:3]})
+    if len(rows) == 6:
+        break
+pd.DataFrame(rows)
+
+# %% [markdown]
+# ## 11. Keluaran
+#
+# File untuk dikumpulkan dan ringkasan run.
+
+# %%
+pd.DataFrame({"id": range(len(final_test)), "tags": [" ".join(t) for t in final_test]}).to_csv(
+    RESULT_DIR / "submission.csv", index=False
+)
+run_summary("pos_tagging", len(train), {r["model"]: {"valid": r["f1_valid"], "test": r["f1_test"]} for r in results},
+            needs_gpu=USE_PRETRAINED)
+
+# %% [markdown]
+# **Poin untuk presentasi**
+#
+# - F1 test 0,9638, sedangkan baseline fitur 0,954. Selisihnya hanya 0,0098.
+# - Kalau waktu mepet, baseline jauh lebih murah: 110 detik dibanding 792 detik.
+# - Pasangan tersulit: VBI 0,9103, ADJ 0,9176, NNP 0,9387.

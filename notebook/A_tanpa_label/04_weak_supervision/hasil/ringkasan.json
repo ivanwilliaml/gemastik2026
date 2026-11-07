@@ -1,0 +1,20 @@
+{
+ "task": "weak_supervision",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 231,
+ "gpu": true,
+ "tahap_detik": {
+  "zero_shot": 61.3,
+  "classifier_lemah": 102.5,
+  "aspek_mbg": 52.9
+ },
+ "metrik": {
+  "kata_kunci": 0.4512,
+  "zero_shot_mentah": 0.5769,
+  "zero_shot": 0.5584,
+  "weak_supervision": 0.6753,
+  "rata_rata_final": 0.6782
+ }
+}

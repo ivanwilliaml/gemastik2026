@@ -1,0 +1,25 @@
+{
+ "task": "qa_span",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 2495,
+ "total_detik": 524,
+ "gpu": true,
+ "tahap_detik": {
+  "transformer": 511.5
+ },
+ "metrik": {
+  "kemiripan_kata": {
+   "f1_test": 0.2422,
+   "exact_test": 0.0354
+  },
+  "model_utama_argmax": {
+   "f1_test": 0.7326,
+   "exact_test": 0.5177
+  },
+  "model_utama_span_terbaik": {
+   "f1_test": 0.7725,
+   "exact_test": 0.6013
+  }
+ }
+}

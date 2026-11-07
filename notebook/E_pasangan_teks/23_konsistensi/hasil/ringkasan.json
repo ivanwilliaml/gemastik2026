@@ -1,0 +1,29 @@
+{
+ "task": "konsistensi",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 4498,
+ "total_detik": 1476,
+ "gpu": true,
+ "tahap_detik": {
+  "cross_encoder": 1452.4
+ },
+ "metrik": {
+  "mayoritas": {
+   "oof": 0.3703,
+   "holdout": 0.3687
+  },
+  "fitur_relasi": {
+   "oof": 0.9236,
+   "holdout": 0.919
+  },
+  "cross_encoder": {
+   "oof": 0.9174,
+   "holdout": 0.9127
+  },
+  "stacking_plus_threshold": {
+   "oof": 0.9446,
+   "holdout": 0.9533
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "task": "nli",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 350,
+ "total_detik": 560,
+ "gpu": true,
+ "tahap_detik": {
+  "nli_pretrained": 32.4,
+  "cross_encoder": 513.9
+ },
+ "metrik": {
+  "mayoritas": {
+   "oof": 0.3794,
+   "test": 0.3789
+  },
+  "fitur_perbedaan": {
+   "oof": 0.7988,
+   "test": 0.7926
+  },
+  "nli_pretrained_0_5": {
+   "oof": 0.8791,
+   "test": 0.8827
+  },
+  "cross_encoder_0_5": {
+   "oof": 0.7571,
+   "test": 0.7868
+  },
+  "stacking_plus_threshold": {
+   "oof": 0.8748,
+   "test": 0.9132
+  }
+ }
+}

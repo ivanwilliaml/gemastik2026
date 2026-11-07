@@ -1,0 +1,20 @@
+{
+ "task": "kata_kunci",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 58,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline": 1.4,
+  "embedding": 43.8
+ },
+ "metrik": {
+  "tfidf": 0.0971,
+  "yake": 0.143,
+  "embedding": 0.1642,
+  "tfidf_buang_tumpang_tindih": 0.0757,
+  "yake_buang_tumpang_tindih": 0.0985,
+  "embedding_mmr": 0.2706
+ }
+}

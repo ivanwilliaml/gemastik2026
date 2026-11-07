@@ -1,0 +1,26 @@
+{
+ "task": "keyphrase",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 800,
+ "total_detik": 177,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline": 10.0,
+  "transformer": 151.7
+ },
+ "metrik": {
+  "baseline_fitur": {
+   "valid": 0.6945,
+   "test": 0.5883
+  },
+  "model_utama": {
+   "valid": 0.7554,
+   "test": 0.6976
+  },
+  "model_utama_plus_perbaikan_bio": {
+   "valid": 0.7554,
+   "test": 0.6976
+  }
+ }
+}

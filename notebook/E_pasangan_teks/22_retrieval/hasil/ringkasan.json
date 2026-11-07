@@ -1,0 +1,31 @@
+{
+ "task": "retrieval",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 4449,
+ "total_detik": 361,
+ "gpu": true,
+ "tahap_detik": {
+  "bm25": 8.1,
+  "dense": 48.3,
+  "rerank": 288.0
+ },
+ "metrik": {
+  "bm25": {
+   "mrr@10": 0.9045,
+   "recall@10": 0.972
+  },
+  "dense_e5": {
+   "mrr@10": 0.7331,
+   "recall@10": 0.865
+  },
+  "hybrid_rrf": {
+   "mrr@10": 0.8617,
+   "recall@10": 0.964
+  },
+  "hybrid_plus_rerank": {
+   "mrr@10": 0.947,
+   "recall@10": 0.976
+  }
+ }
+}

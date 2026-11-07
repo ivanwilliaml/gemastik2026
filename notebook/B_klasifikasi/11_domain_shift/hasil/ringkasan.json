@@ -1,0 +1,30 @@
+{
+ "task": "domain_shift",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 10000,
+ "total_detik": 873,
+ "gpu": true,
+ "tahap_detik": {
+  "self_training": 851.6
+ },
+ "metrik": {
+  "auc_adversarial": 0.992,
+  "tfidf_sumber_saja": {
+   "penjaga": 0.816,
+   "audit": 0.5004
+  },
+  "teacher_sumber_saja": {
+   "penjaga": 0.9517,
+   "audit": 0.6799
+  },
+  "student_self_training": {
+   "penjaga": 0.9502,
+   "audit": 0.6424
+  },
+  "final": {
+   "penjaga": 0.9517,
+   "audit": 0.6799
+  }
+ }
+}

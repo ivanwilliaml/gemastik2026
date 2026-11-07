@@ -1,0 +1,34 @@
+{
+ "task": "terjemahan",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 458,
+ "gpu": true,
+ "tahap_detik": {
+  "marian_pretrained": 34.4,
+  "marian_finetune": 334.0
+ },
+ "metrik": {
+  "salin_sumber": {
+   "bleu_test": 5.18,
+   "chrf_test": 25.95
+  },
+  "kamus_kata": {
+   "bleu_test": 5.72,
+   "chrf_test": 38.8
+  },
+  "marian_pretrained": {
+   "bleu_test": 38.44,
+   "chrf_test": 64.43
+  },
+  "marian_finetune": {
+   "bleu_test": 39.53,
+   "chrf_test": 65.02
+  },
+  "final_dirapikan": {
+   "bleu_test": 39.53,
+   "chrf_test": 65.02
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "task": "duplikat_spam",
+ "mode": "penuh",
+ "use_pretrained": false,
+ "n_rows": 5000,
+ "total_detik": 17,
+ "gpu": false,
+ "tahap_detik": {
+  "tetangga": 5.3
+ },
+ "metrik": {
+  "threshold": 0.8,
+  "injeksi": {
+   "recall": 0.9854,
+   "presisi": 0.9058,
+   "f1": 0.9439
+  }
+ }
+}

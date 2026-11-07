@@ -1,0 +1,34 @@
+{
+ "task": "regresi_ordinal",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 1478,
+ "gpu": true,
+ "tahap_detik": {
+  "transformer": 1438.6,
+  "cut_point": 14.9
+ },
+ "metrik": {
+  "rata_rata": {
+   "qwk_oof": 0.0,
+   "qwk_holdout": 0.0,
+   "rmse_holdout": 0.6609
+  },
+  "tfidf_ridge": {
+   "qwk_oof": 0.3926,
+   "qwk_holdout": 0.3596,
+   "rmse_holdout": 0.5935
+  },
+  "model_utama": {
+   "qwk_oof": 0.6047,
+   "qwk_holdout": 0.5464,
+   "rmse_holdout": 0.5136
+  },
+  "model_utama_plus_cut_point": {
+   "qwk_oof": 0.6354,
+   "qwk_holdout": 0.5815,
+   "rmse_holdout": 0.5937
+  }
+ }
+}

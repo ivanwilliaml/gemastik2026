@@ -1,0 +1,29 @@
+{
+ "task": "clustering",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 205,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline": 11.6,
+  "embedding": 29.2,
+  "umap": 34.3,
+  "clustering": 82.2,
+  "stabilitas": 20.2,
+  "consensus": 0.3
+ },
+ "metrik": {
+  "final": {
+   "model": "consensus_final",
+   "k": 5,
+   "silhouette": 0.0211,
+   "nmi_audit": 0.1538,
+   "ari_audit": 0.1053,
+   "v_audit": 0.1538,
+   "acc_audit": 0.3406
+  },
+  "spearman_silhouette_nmi": -0.946,
+  "spearman_stabilitas_nmi": 0.229
+ }
+}

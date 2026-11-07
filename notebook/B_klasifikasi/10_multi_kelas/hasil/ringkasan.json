@@ -1,0 +1,30 @@
+{
+ "task": "multi_kelas",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 1386,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline_tfidf": 32.5,
+  "transformer": 1334.7
+ },
+ "metrik": {
+  "mayoritas": {
+   "oof": 0.2724,
+   "holdout": 0.2724
+  },
+  "tfidf_lr": {
+   "oof": 0.6242,
+   "holdout": 0.6625
+  },
+  "model_utama": {
+   "oof": 0.7438,
+   "holdout": 0.746
+  },
+  "model_utama_plus_pengali": {
+   "oof": 0.7493,
+   "holdout": 0.7485
+  }
+ }
+}

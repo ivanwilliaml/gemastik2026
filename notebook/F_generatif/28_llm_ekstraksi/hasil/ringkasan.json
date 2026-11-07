@@ -1,0 +1,18 @@
+{
+ "task": "llm_ekstraksi",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 1500,
+ "total_detik": 874,
+ "gpu": true,
+ "tahap_detik": {
+  "llm_audit": 43.4,
+  "resolve_audit": 5.7,
+  "llm_mbg": 97.1
+ },
+ "metrik": {
+  "lolos_skema_tanpa_ulang": 0.9,
+  "kata_kunci": 0.6101,
+  "llm_plus_pengaman": 0.7264
+ }
+}

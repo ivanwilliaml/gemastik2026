@@ -1,0 +1,40 @@
+{
+ "task": "semi_supervised",
+ "n_rows": 5000,
+ "total_detik": 2735,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline_tfidf": 8.3,
+  "model_utama": 2714.4
+ },
+ "metrik": [
+  {
+   "model": "mayoritas",
+   "oof": 0.2453,
+   "oof_ci95": "0.234-0.256",
+   "oof_mirip_test": 0.2059,
+   "test": 0.1959
+  },
+  {
+   "model": "tfidf_lr",
+   "oof": 0.6652,
+   "oof_ci95": "0.603-0.720",
+   "oof_mirip_test": 0.6484,
+   "test": 0.5322
+  },
+  {
+   "model": "transformer_teacher",
+   "oof": 0.8611,
+   "oof_ci95": "0.819-0.899",
+   "oof_mirip_test": 0.8668,
+   "test": 0.8069
+  },
+  {
+   "model": "transformer_student",
+   "oof": 0.8741,
+   "oof_ci95": "0.835-0.912",
+   "oof_mirip_test": 0.8845,
+   "test": 0.8156
+  }
+ ]
+}

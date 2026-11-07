@@ -1,0 +1,34 @@
+{
+ "task": "normalisasi",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 1922,
+ "total_detik": 1607,
+ "gpu": true,
+ "tahap_detik": {
+  "mt5_finetune": 1101.0,
+  "mt5_generate": 26.6
+ },
+ "metrik": {
+  "salin_teks": {
+   "cer_test": 0.2299,
+   "bleu_test": 32.51
+  },
+  "kamus_alay": {
+   "cer_test": 0.2087,
+   "bleu_test": 40.06
+  },
+  "kamus_gabungan": {
+   "cer_test": 0.1932,
+   "bleu_test": 43.23
+  },
+  "mt5_finetune": {
+   "cer_test": 0.1712,
+   "bleu_test": 50.48
+  },
+  "model_plus_pengaman": {
+   "cer_test": 0.166,
+   "bleu_test": 51.08
+  }
+ }
+}

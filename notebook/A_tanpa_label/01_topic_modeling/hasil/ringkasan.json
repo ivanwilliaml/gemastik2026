@@ -1,0 +1,27 @@
+{
+ "task": "topic_modeling",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 4456,
+ "total_detik": 146,
+ "gpu": true,
+ "tahap_detik": {
+  "embedding": 32.7,
+  "baseline": 55.5,
+  "umap": 26.4,
+  "clustering": 2.9,
+  "stabilitas": 1.6
+ },
+ "metrik": {
+  "final": {
+   "model": "final",
+   "k": 5,
+   "npmi": 0.1727,
+   "diversity": 0.86,
+   "silhouette": 0.0017
+  },
+  "dipilih": "nmf_5",
+  "stabilitas_ari": 0.984,
+  "outlier_hdbscan": 0.352
+ }
+}

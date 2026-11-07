@@ -1,0 +1,30 @@
+{
+ "task": "biner",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 1292,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline_tfidf": 6.6,
+  "transformer": 1264.6
+ },
+ "metrik": {
+  "semua_positif": {
+   "oof": 0.5883,
+   "holdout": 0.5886
+  },
+  "tfidf_lr": {
+   "oof": 0.7965,
+   "holdout": 0.8132
+  },
+  "model_utama": {
+   "oof": 0.8629,
+   "holdout": 0.8754
+  },
+  "model_utama_plus_threshold": {
+   "oof": 0.8633,
+   "holdout": 0.8771
+  }
+ }
+}

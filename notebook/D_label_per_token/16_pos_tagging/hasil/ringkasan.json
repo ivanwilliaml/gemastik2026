@@ -1,0 +1,26 @@
+{
+ "task": "pos_tagging",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 5000,
+ "total_detik": 914,
+ "gpu": true,
+ "tahap_detik": {
+  "baseline": 109.5,
+  "transformer": 792.2
+ },
+ "metrik": {
+  "baseline_fitur": {
+   "valid": 0.9536,
+   "test": 0.954
+  },
+  "model_utama": {
+   "valid": 0.9626,
+   "test": 0.9638
+  },
+  "model_utama_plus_perbaikan_bio": {
+   "valid": 0.9626,
+   "test": 0.9638
+  }
+ }
+}

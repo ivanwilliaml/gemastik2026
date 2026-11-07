@@ -1,0 +1,42 @@
+{
+ "task": "kemiripan",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 1500,
+ "total_detik": 632,
+ "gpu": true,
+ "tahap_detik": {
+  "biencoder": 43.8,
+  "cross_encoder": 574.6
+ },
+ "metrik": {
+  "parafrase": {
+   "f1_oof": 0.5732,
+   "f1_holdout": 0.5745
+  },
+  "cosine_tfidf": {
+   "pearson_oof": 0.6978,
+   "pearson_holdout": 0.6111
+  },
+  "ridge_fitur_kata": {
+   "pearson_oof": 0.6963,
+   "pearson_holdout": 0.6108
+  },
+  "biencoder_e5": {
+   "pearson_oof": 0.6198,
+   "pearson_holdout": 0.6659
+  },
+  "cross_encoder": {
+   "pearson_oof": 0.8319,
+   "pearson_holdout": 0.7669
+  },
+  "gabungan_peringkat": {
+   "pearson_oof": 0.7985,
+   "pearson_holdout": 0.7762
+  },
+  "gabungan_plus_kalibrasi": {
+   "pearson_oof": 0.7939,
+   "pearson_holdout": 0.7788
+  }
+ }
+}

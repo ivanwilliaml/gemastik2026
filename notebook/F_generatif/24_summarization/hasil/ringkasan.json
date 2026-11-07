@@ -1,0 +1,41 @@
+{
+ "task": "summarization",
+ "mode": "penuh",
+ "use_pretrained": true,
+ "n_rows": 4000,
+ "total_detik": 3678,
+ "gpu": true,
+ "tahap_detik": {
+  "textrank": 2.3,
+  "ekstraktif": 8.0,
+  "mt5_generate": 441.2,
+  "mt5_finetune": 2315.8,
+  "mt5_dev": 242.4
+ },
+ "metrik": {
+  "kalimat_pertama": {
+   "rouge1": 0.6661,
+   "rouge2": 0.5976
+  },
+  "textrank": {
+   "rouge1": 0.4316,
+   "rouge2": 0.2929
+  },
+  "ekstraktif_supervised": {
+   "rouge1": 0.6676,
+   "rouge2": 0.5981
+  },
+  "mt5_pretrained": {
+   "rouge1": 0.3788,
+   "rouge2": 0.3156
+  },
+  "mt5_setelah_finetune": {
+   "rouge1": 0.6721,
+   "rouge2": 0.5871
+  },
+  "final_ekstraktif_supervised": {
+   "rouge1": 0.6676,
+   "rouge2": 0.5981
+  }
+ }
+}
