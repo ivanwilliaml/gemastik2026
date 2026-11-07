@@ -8,6 +8,7 @@
 
 | Folder | Notebook |
 |---|---|
+| `EDA_universal/` | **EDA universal, satu notebook untuk data apa pun.** 21 modul dari skema sampai ablation. Tiap modul menampilkan semua kondisi yang mungkin dan menyorot kondisi data saat ini, lalu merangkumnya jadi laporan keputusan di `eda_out/`. Ubah sel Konfigurasi saja. Kolom yang tidak ada otomatis dilewati |
 | `00_setup_offline/` | **Setup offline.** Butuh internet dan cukup dijalankan sekali: mengunduh model, data tambahan, dan wheel library menjadi satu paket, lalu menulis `pack_manifest.json` yang dicari notebook lain |
 | `A_tanpa_label/` | 01 topic modeling, 02 tren topik dan sentimen per waktu, 03 clustering, 04 weak supervision dan zero-shot, 05 kata kunci, 06 anomali teks, 07 near-duplicate, spam, dan bot |
 | `B_klasifikasi/` | 08 semi-supervised, 09 biner, 10 multi-kelas dengan imbalance, 11 domain shift, 12 multi-label, 13 aspect-based sentiment |

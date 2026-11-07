@@ -64,6 +64,8 @@ Script memeriksa kelengkapan bundle, memilih varian torch dari versi CUDA driver
 
 Lihat [README notebook](notebook/README.md). Notebook bersifat mandiri per task dan memakai library `nlp_kit` di folder yang sama.
 
+Untuk mengulik data baru, mulai dari [`notebook/EDA_universal/EDA_universal.ipynb`](notebook/EDA_universal/EDA_universal.ipynb): cukup ubah sel Konfigurasi, dan tiap temuan langsung menunjukkan artinya, aksinya, dan cara mengujinya.
+
 ## Rencana hari H
 
 | Tanggal | Kegiatan |

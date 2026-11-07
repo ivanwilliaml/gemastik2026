@@ -32,3 +32,4 @@ NLP-Competition-Toolkit/runs/
 # ---- Keluaran mentah notebook: dibuat ulang saat notebook dijalankan.
 # Ringkasan JSON tetap ikut.
 notebook/**/hasil/*.csv
+notebook/EDA_universal/eda_out/
