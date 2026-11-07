@@ -1,0 +1,34 @@
+# ---- Python dan editor
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.ruff_cache/
+.pytest_cache/
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- Bundle offline (sekitar 12 GB): dibuat oleh persiapan_h1/01_download_all.py
+/bundle/
+/persiapan_h1/bundle/
+wheelhouse*/
+/gguf/
+/models/
+
+# ---- Dokumen resmi pihak lain, bukan milik repo ini
+Buku Saku*.pdf
+
+# ---- Dataset latihan toolkit: diunduh ulang dengan tools/download_dataset.py
+# catalog.json dan CATALOG.md tetap ikut.
+NLP-Competition-Toolkit/datasets/*/
+
+# ---- Hasil run toolkit (OOF, prediksi, log eksperimen)
+NLP-Competition-Toolkit/runs/
+*.part
+
+# ---- Keluaran mentah notebook: dibuat ulang saat notebook dijalankan.
+# Ringkasan JSON tetap ikut.
+notebook/**/hasil/*.csv
