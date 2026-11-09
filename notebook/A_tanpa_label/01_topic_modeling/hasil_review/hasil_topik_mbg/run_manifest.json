@@ -1,0 +1,29 @@
+{
+  "dataset": "mbg",
+  "rows": 5000,
+  "bow_view": "bow_stem",
+  "base": "nmf_k5",
+  "k_final": 5,
+  "post": [
+    "outlier"
+  ],
+  "final": {
+    "stability": NaN,
+    "outlier_%": 0.0,
+    "max_share_%": 36.64,
+    "NPMI": 0.15215759910008017,
+    "diversity": 0.736,
+    "TQ": 0.42399399646882946,
+    "min_cluster_size": NaN
+  },
+  "seconds": 555.275066764,
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "umap-learn": "0.5.12",
+    "gensim": "4.4.0",
+    "pandas": "2.3.3"
+  }
+}

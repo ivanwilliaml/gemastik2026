@@ -11,9 +11,9 @@ venv/
 .DS_Store
 Thumbs.db
 
-# ---- Bundle offline (sekitar 12 GB): dibuat oleh persiapan_h1/01_download_all.py
+# ---- Bundle offline (sekitar 12 GB): dibuat oleh persiapan_offline/01_download_all.py
 /bundle/
-/persiapan_h1/bundle/
+/persiapan_offline/bundle/
 wheelhouse*/
 /gguf/
 /models/
@@ -23,13 +23,19 @@ Buku Saku*.pdf
 
 # ---- Dataset latihan toolkit: diunduh ulang dengan tools/download_dataset.py
 # catalog.json dan CATALOG.md tetap ikut.
-NLP-Competition-Toolkit/datasets/*/
+toolkit/datasets/*/
 
 # ---- Hasil run toolkit (OOF, prediksi, log eksperimen)
-NLP-Competition-Toolkit/runs/
+toolkit/runs/
 *.part
 
 # ---- Keluaran mentah notebook: dibuat ulang saat notebook dijalankan.
 # Ringkasan JSON tetap ikut.
 notebook/**/hasil/*.csv
-notebook/EDA_universal/eda_out/
+notebook/eda_universal/eda_out/
+
+# ---- Generated files and local inputs
+notebook/preprocessing_universal/hasil_stepwise/
+notebook/preprocessing_universal/data/*.csv
+notebook/preprocessing_universal/resources/downloaded/
+notebook/preprocessing_universal/legacy/hasil_sintetis.zip

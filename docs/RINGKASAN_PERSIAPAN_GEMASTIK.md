@@ -159,7 +159,7 @@ Skor SEA-HELM Indonesia (leaderboard 18 Sep 2026, kolom tanpa nama diasumsikan s
 
 ### 6.1 Lokasi
 
-`D:\Lomba\2026\Gemastik\persiapan_h1\`
+`D:\Lomba\2026\Gemastik\persiapan_offline\`
 
 | File | Dijalankan di | Internet | Fungsi |
 |---|---|---|---|
@@ -420,20 +420,17 @@ Studi terbit dominan pada sentimen 3 kelas dan BERTopic. Contoh skor: IndoBERT a
 
 ## 14. Peta file
 
-```
+```text
 D:\Lomba\2026\Gemastik\
-├─ RINGKASAN_PERSIAPAN_GEMASTIK.md          <- file ini
-├─ Buku Saku Gemastik XIX - 2026 portrait.pdf
-├─ persiapan_h1\                            <- script download/install/verify
-└─ riset\
-   ├─ Laporan_lengkap_Persiapan_final_NLP_offline_MBG.md
-   └─ catatan_mentah\
-      ├─ indonesian_pretrained_models.md      (model Indonesia, embedding, estimasi throughput)
-      ├─ local_llm_offline.md                 (LLM lokal, runtime, GGUF)
-      ├─ mbg_domain_and_tasks.md              (domain MBG, task, literatur, dataset)
-      ├─ indonesian_resources_lexicons.md     (leksikon, preprocessing, uji lokal)
-      ├─ offline_environment_packaging.md     (torch/CUDA, wheelhouse, HF offline, Windows)
-      └─ strategy_5h_and_past_lessons.md      (strategi 5 jam, pelajaran portofolio)
+├─ notebook\                  notebook universal, per task, library, dan pembangun
+├─ toolkit\                   panduan HTML offline, snippet, pipeline, dataset
+├─ persiapan_offline\          download, instalasi, dan verifikasi environment
+└─ docs\
+   ├─ RINGKASAN_PERSIAPAN_GEMASTIK.md
+   ├─ Buku Saku Gemastik XIX - 2026 portrait.pdf
+   └─ riset\
+      ├─ Laporan_lengkap_Persiapan_final_NLP_offline_MBG.md
+      └─ catatan_mentah\
 ```
 
-**Catatan tentang laporan lengkap:** isinya ditulis sebelum info PC panitia diketahui. Bagian yang mengasumsikan laptop GTX 1650 (fp32-only, upgrade RAM, page file, estimasi waktu, LLM di 4 GB) sudah digantikan oleh file ini. Daftar paket dan constraint di laporan itu juga sudah diubah di `persiapan_h1`; jika berbeda, `persiapan_h1` yang berlaku.
+**Catatan tentang laporan lengkap:** isinya ditulis sebelum info PC panitia diketahui. Bagian yang mengasumsikan laptop GTX 1650 (fp32-only, upgrade RAM, page file, estimasi waktu, LLM di 4 GB) sudah digantikan oleh file ini. Daftar paket dan constraint di laporan itu juga sudah diubah di `persiapan_offline`; jika berbeda, `persiapan_offline` yang berlaku.

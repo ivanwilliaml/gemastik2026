@@ -1,0 +1,219 @@
+[
+  {
+    "key": "validate",
+    "title": "A1 · Validasi tipe teks",
+    "description": "Null/angka/list menjadi string kosong pada teks kerja, bukan literal `nan` atau `123`. String asli `\"nan\"`/`\"None\"` tetap teks. Baris tidak dibuang; nilai sumber tetap ada di raw.",
+    "function": "valid_text",
+    "example": null
+  },
+  {
+    "key": "escaped_bytes",
+    "title": "A2 · Decode byte escape",
+    "description": "Opsional untuk hasil scraping dengan byte UTF-8 tersimpan literal. Byte invalid tetap utuh. Bukan decode `unicode_escape` pada seluruh teks, yang bisa merusak Unicode valid.",
+    "function": "decode_byte_escapes",
+    "example": "emoji \\xf0\\x9f\\x98\\xa1"
+  },
+  {
+    "key": "encoding",
+    "title": "A3 · Perbaiki encoding rusak",
+    "description": "ftfy memperbaiki mojibake. Perubahan tipografi, lebar karakter, dan HTML di ftfy dimatikan agar setiap transformasi terlihat pada tahapnya sendiri.",
+    "function": "repair_encoding",
+    "example": "cafÃ©, nasi sehat"
+  },
+  {
+    "key": "unicode",
+    "title": "A4 · Normalisasi Unicode NFC",
+    "description": "Samakan representasi kanonis. Tidak menghapus aksara daerah/emoji dan tidak memaksa ASCII/NFKC.",
+    "function": "normalize_unicode",
+    "example": "Café"
+  },
+  {
+    "key": "html_markup",
+    "title": "A5 · Buang markup HTML bila ada",
+    "description": "Parser HTML hanya untuk sumber yang benar-benar markup. Plain text `nilai < 5 > 1` jangan diparse sembarangan. Script/style dibuang. Contoh kecil tetap menunjukkan parser walaupun tahap dataset dimatikan.",
+    "function": "remove_html",
+    "example": "<p>Menu <b>sehat</b></p><script>bad()</script>"
+  },
+  {
+    "key": "entities",
+    "title": "A6 · Decode HTML entities",
+    "description": "`&amp;`, `&quot;`, `&#...;` menjadi karakter aslinya. Satu lapis decoding; tidak berulang tanpa batas pada teks yang sengaja menuliskan entity.",
+    "function": "decode_html_entities",
+    "example": "MBG &amp; gizi &quot;baik&quot;"
+  },
+  {
+    "key": "invisible",
+    "title": "A7 · Bersihkan karakter kontrol",
+    "description": "Hapus BOM, zero-width space, word joiner, null byte; kontrol lain menjadi spasi. ZWJ/ZWNJ dan variation selectors dipertahankan agar emoji gabungan tidak pecah.",
+    "function": "remove_invisible",
+    "example": "teks​baru\u0000 👩‍🍳"
+  },
+  {
+    "key": "whitespace",
+    "title": "A8 · Rapikan whitespace",
+    "description": "Gabungkan tab/newline/spasi berulang dan strip tepi. Notebook ini untuk komentar satu baris; untuk dokumen berparagraf, pakai versi yang mempertahankan newline.",
+    "function": "normalize_whitespace",
+    "example": "  menu\tsehat\r\n  merata  "
+  },
+  {
+    "key": "obfuscation",
+    "title": "B1 · Normalisasi teks tersamarkan",
+    "description": "Hanya allowlist kata yang eksplisit: tidak mengubah semua 3→e/4→a karena nomor dan kode bisa rusak. Dilakukan sebelum mention supaya `ker@cunan` bisa dikenali sebagai kata.",
+    "function": "normalize_obfuscation",
+    "example": "k3r4cUn4n ker@cunan koru*si S2 Rp10.000"
+  },
+  {
+    "key": "urls",
+    "title": "B2 · Ganti URL",
+    "description": "URL panjang menjadi placeholder. Tanda baca penutup dipertahankan dengan heuristik sederhana; raw tetap menyimpan tautan lengkap.",
+    "function": "replace_urls",
+    "example": "cek https://contoh.id/x?q=gk, sekarang!"
+  },
+  {
+    "key": "emails",
+    "title": "B3 · Ganti alamat email",
+    "description": "Email sebelum mention agar `@domain` tidak dianggap akun.",
+    "function": "replace_emails",
+    "example": "kirim admin@contoh.id ya"
+  },
+  {
+    "key": "phones",
+    "title": "B4 · Ganti nomor telepon",
+    "description": "Pola konservatif nomor seluler Indonesia. Nominal/tanggal tidak diganti. Format telepon di luar pola perlu aturan tambahan.",
+    "function": "replace_phones",
+    "example": "WA +62 812-3456-7890, harga Rp10.000"
+  },
+  {
+    "key": "mentions",
+    "title": "B5 · Ganti mention",
+    "description": "Mention menjadi placeholder. Nama orang di kalimat biasa tetap ada.",
+    "function": "replace_mentions",
+    "example": "@budi dan @siti.id bahas MBG"
+  },
+  {
+    "key": "hashtags",
+    "title": "B6 · Segmentasi hashtag",
+    "description": "Pisahkan CamelCase/akronim, pertahankan isi kata. Hashtag lowercase gabungan hanya dipecah lewat mapping yang disetujui.",
+    "function": "lambda s: segment_hashtags(s, HASHTAG_APPROVED)",
+    "example": "#TolakMBG #DukungProgramMBG #tolakmbg"
+  },
+  {
+    "key": "lowercase",
+    "title": "B7 · Lowercase",
+    "description": "Casefold untuk cabang normalisasi/clean. Kapitalisasi asli tetap tersedia di safe/raw untuk model yang membutuhkannya.",
+    "function": "lowercase",
+    "example": "TIDAK Bagus! SPPG MBG"
+  },
+  {
+    "key": "slang",
+    "title": "C1 · Normalisasi slang dan singkatan informal",
+    "description": "Exact-token mapping, bukan replace substring. `gk,` tetap dikenali, isi URL/email/hashtag tidak diubah. `sm/dr/bs` tidak ditebak. Akronim MBG/SPPG/BGN tidak diekspansi otomatis.",
+    "function": "lambda s: normalize_slang(s, SLANG_USED)",
+    "example": "mbg bgs bgt, tp gk merata sm dr SPPG"
+  },
+  {
+    "key": "elongation",
+    "title": "C2 · Normalisasi huruf memanjang",
+    "description": "Kurangi pengulangan 3+ hanya jika hasil ada di VOCAB. Double letter sah seperti massa/Allah tetap utuh; kata yang belum dikenal tidak dipaksa. Perluas VOCAB dari sumber yang dikurasi.",
+    "function": "normalize_elongation",
+    "example": "baguuuuus bangeeet Allah massa xyztttt"
+  },
+  {
+    "key": "laughter",
+    "title": "C3 · Normalisasi tawa",
+    "description": "Kelompokkan variasi pola wkwk/haha yang eksplisit. Tawa tetap token ekspresi, tidak dibuang.",
+    "function": "normalize_laughter",
+    "example": "wkwkwkwkwk hahahaha bagus"
+  },
+  {
+    "key": "reduplication",
+    "title": "C4 · Normalisasi reduplikasi angka 2",
+    "description": "Whitelist `anak2/orang2/teman2`, bukan semua token berangka. S2/GPT2/angka tanggal tetap.",
+    "function": "normalize_reduplication",
+    "example": "anak2 orang2 teman2 S2 GPT2"
+  },
+  {
+    "key": "regional",
+    "title": "C5 · Normalisasi bahasa daerah opsional",
+    "description": "Dimatikan default. Contoh mapping kecil, bukan penerjemah. Aktifkan hanya setelah mengecek konteks; campuran bahasa tidak otomatis dianggap salah ketik.",
+    "function": "normalize_regional",
+    "example": "ora apik dan teu enak"
+  },
+  {
+    "key": "typo",
+    "title": "C6 · Terapkan typo yang sudah direview",
+    "description": "TYPO_APPROVED kosong secara default. Masukkan pasangan yang pasti setelah review. Kata tidak dikenal tidak otomatis dianggap typo. Nama lowercase masih bisa salah dikoreksi jika mapping sembarangan, sehingga review tetap diperlukan.",
+    "function": "lambda s: apply_reviewed_typos(s, TYPO_APPROVED)",
+    "example": "maknan bergzi SPPG"
+  },
+  {
+    "key": "punctuation_repeat",
+    "title": "C7 · Ringkas tanda baca berulang",
+    "description": "Pengulangan ekstrem jadi maksimal dua: `!!!!!→!!`. Jenis tanda baca tidak disamakan. Cabang clean di bawah akan membuang tanda bacanya sepenuhnya.",
+    "function": "normalize_punctuation_repeat",
+    "example": "serius????!!!! bagus....."
+  },
+  {
+    "key": "emoji_remove",
+    "title": "D1 · Hapus emoji",
+    "description": "Hapus satu sequence emoji secara utuh, termasuk emoji keluarga/skin tone/flag. Alternatif deskripsi emoji tersedia terpisah di bagian E.",
+    "function": "remove_emoji",
+    "example": "bagus 😍 🙏🏽 👨‍👩‍👧‍👦 🇮🇩"
+  },
+  {
+    "key": "emoticons",
+    "title": "D2 · Hapus emoticon ASCII",
+    "description": "Aturan umum :) :( :)) <3, bukan semua emoticon yang pernah ada. Tanda baca sisanya dibersihkan di D4.",
+    "function": "remove_emoticons",
+    "example": "bagus :)) sedih :( cinta <3"
+  },
+  {
+    "key": "numbers",
+    "title": "D3 · Hapus angka opsional",
+    "description": "Dimatikan default. Jika diaktifkan nominal/tanggal akan kehilangan angka; gunakan hanya jika memang tidak relevan pada task. Angka di kode alfanumerik tidak otomatis dihapus.",
+    "function": "remove_numbers",
+    "example": "3 siswa Rp10.000 pada 10/11/2026 S2"
+  },
+  {
+    "key": "punctuation",
+    "title": "D4 · Hapus tanda baca dan simbol",
+    "description": "Ubah ke spasi agar kata tidak menempel. Huruf Unicode/angka tetap. Nama dengan tanda hubung berubah menjadi kata terpisah; periksa implikasinya untuk entitas.",
+    "function": "remove_punctuation",
+    "example": "anak-anak, bagus!!! tidak/buruk; 10.000"
+  },
+  {
+    "key": "repeated_words",
+    "title": "D5 · Ringkas repetisi kata berturut-turut",
+    "description": "Hanya kata identik berurutan. Ekspresi `bagus bagus` akan jadi `bagus`; normalized masih menyimpan ekspresinya.",
+    "function": "reduce_repeated_words",
+    "example": "bagus bagus bagus tapi tidak tidak"
+  },
+  {
+    "key": "stopwords",
+    "title": "D6 · Hapus stopword",
+    "description": "Daftar kecil yang transparan dan bisa diganti. Negasi dan akronim terlindungi tidak dibuang walaupun masuk daftar tambahan.",
+    "function": "remove_stopwords",
+    "example": "makanan yang bagus untuk anak dan tidak merata"
+  },
+  {
+    "key": "stemming",
+    "title": "D7 · Stemming Sastrawi",
+    "description": "Bentuk dasar per kata unik dengan cache terbatas. Negasi dan akronim terlindungi. Stemming bukan spellchecker dan dapat mengubah nama/istilah: safe/normalized tetap ada.",
+    "function": "stem_text",
+    "example": "makanan membantu pemerataan dan tidak bergizi SPPG"
+  },
+  {
+    "key": "emoji_describe",
+    "title": "E1 · Emoji menjadi deskripsi",
+    "description": "Shortcode Inggris dari library emoji, bukan hasil klasifikasi sentimen dan bukan terjemahan Indonesia.",
+    "function": "describe_emoji",
+    "example": "Menu 😍 👩‍🍳"
+  },
+  {
+    "key": "indobertweet",
+    "title": "E2 · Resep khusus IndoBERTweet",
+    "description": "Lowercase, mention→@USER, URL→HTTPURL, emoji shortcode mengikuti resep publik model. Jangan menambahkan stopword/stemming ke view ini tanpa eksperimen.",
+    "function": "indobertweet_view",
+    "example": "@Budi MBG BAGUS 😍 https://contoh.id"
+  }
+]

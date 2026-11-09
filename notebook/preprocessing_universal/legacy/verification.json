@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-08",
+  "python": "3.12.6",
+  "unit_tests": {
+    "run": 12,
+    "failures": 0,
+    "errors": 0
+  },
+  "notebook": {
+    "cells": 39,
+    "execution_errors": 0,
+    "data": "synthetic demo; online resources predownloaded, notebook download disabled"
+  },
+  "resources": {
+    "candidate_rows": 20595,
+    "conflicting_variants": 862,
+    "conflicting_rows": 1893
+  },
+  "benchmark": {
+    "rows": 20000,
+    "unique_raw": 20000,
+    "seconds": 6.175,
+    "rows_per_second": 3239,
+    "views": [
+      "social",
+      "tfidf",
+      "indobertweet"
+    ],
+    "kind": "synthetic 20k, all unique, core only; no typo/LSH; not a 500k guarantee"
+  },
+  "untested": [
+    "fastText local model",
+    "real labelled MBG performance",
+    "500k full run"
+  ],
+  "chunked_roundtrip": "passed; 3 chunks including all-null first chunk, global positional IDs and exact group keys checked"
+}

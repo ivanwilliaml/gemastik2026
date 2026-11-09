@@ -1,0 +1,41 @@
+{
+  "dataset": "news",
+  "rows": 5000,
+  "raw_rows": 91017,
+  "seed": 42,
+  "bow_view": "bow_stem",
+  "rep": "e5",
+  "k": 6,
+  "final": "post_gabung_kecil+duplikat",
+  "domain_stopwords": [
+    "di"
+  ],
+  "final_scores": {
+    "stability_ARI": NaN,
+    "noise_%": 0.0,
+    "max_share_%": 21.2,
+    "min_share_%": 12.34,
+    "NPMI": -0.09238266394491085,
+    "diversity": 0.8833333333333333,
+    "silhouette_own": 0.04639841243624687,
+    "silhouette_e5": 0.04639841243624687,
+    "audit_NMI": 0.19744499426194193,
+    "audit_ARI": 0.1342913451274801,
+    "audit_homogeneity": 0.19288276501736623,
+    "audit_completeness": 0.20222827147236636,
+    "audit_acc_hungarian": 0.3346,
+    "audit_purity": 0.4798,
+    "DB_own": 5.188541821779358,
+    "CH_own": 32.240028381347656
+  },
+  "seconds": 301.472499729,
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "umap-learn": "0.5.12",
+    "gensim": "4.4.0",
+    "pandas": "2.3.3"
+  }
+}

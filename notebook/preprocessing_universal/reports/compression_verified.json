@@ -1,0 +1,16 @@
+[
+  {
+    "source": "notebook\\preprocessing_universal\\hasil_stepwise\\before_after_stages.csv",
+    "gzip": "notebook\\preprocessing_universal\\hasil_stepwise\\before_after_stages.csv.gz",
+    "source_bytes": 132236610,
+    "compressed_bytes": 5033143,
+    "sha256": "9aa6c77eee4dc47c3c848e00e5ddd52afe1d8c88f5096043e3fb7849d0fc862c"
+  },
+  {
+    "source": "notebook\\preprocessing_universal\\hasil_stepwise\\comments.jsonl",
+    "gzip": "notebook\\preprocessing_universal\\hasil_stepwise\\comments.jsonl.gz",
+    "source_bytes": 77684742,
+    "compressed_bytes": 12298277,
+    "sha256": "07668b117e4b85990270baee0b108e843d637bbfb683a39d4cbac632de4aea4f"
+  }
+]

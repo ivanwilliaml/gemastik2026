@@ -1,0 +1,17 @@
+{
+  "id": "ivanwllm/gemastik-multiclass-pretrained-v2",
+  "title": "Gemastik Multiclass Pretrained V2",
+  "code_file": "10_multi_kelas_v2_pretrained.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "dzikriraihan/indonesian-youtube-comments-mbg-program"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}

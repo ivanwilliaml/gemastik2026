@@ -1,0 +1,5 @@
+resources/downloaded/
+hasil_preprocessing/
+hasil_besar/
+hasil_stepwise/
+data/*.csv

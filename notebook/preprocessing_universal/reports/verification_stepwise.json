@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-08",
+  "notebook_cells": 128,
+  "executed_code_cells": 82,
+  "notebook_errors": 0,
+  "elapsed_seconds": 61.94,
+  "data": "Real TikTok MBG comments, full local MBG_PROCESSED.csv",
+  "rows": 57362,
+  "input_sha256": "d8d1da42d483975a8a4140d9babfc0f759e07e96ad6ff4482bdc38b3ea2b659b",
+  "text_column": "comment",
+  "sampled": false,
+  "synthetic_rule_examples_shown": false,
+  "parity": "passed: every notebook text view and tokens equals one-call API",
+  "source_metadata_preserved": true,
+  "untested": [
+    "MBG task accuracy improvement",
+    "500k full run"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "model": "04_nli_pretrained",
+  "bias": [
+    -0.6,
+    0.6,
+    -0.6
+  ],
+  "classes": [
+    "entailment",
+    "neutral",
+    "contradiction"
+  ]
+}

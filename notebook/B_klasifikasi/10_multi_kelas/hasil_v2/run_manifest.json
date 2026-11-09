@@ -1,0 +1,121 @@
+{
+  "experiment": "multiclass_pretrained_v2",
+  "seed": 42,
+  "raw_rows": 5035,
+  "rows": 5000,
+  "split_rows": {
+    "train": 3019,
+    "validation": 998,
+    "holdout": 983
+  },
+  "split_sha256": "6bd611a55f0907b9917ba0e4381c491044210762a926cd62ddba75a29ec34456",
+  "dataset_sha256": "a0283b93e120dd5c411bd37117c38879da21cdb39c6c7ec4c9fafd11d7956fba",
+  "model_specs": [
+    {
+      "name": "01_indobertweet",
+      "id": "indolem/indobertweet-base-uncased",
+      "family": "tweet",
+      "batch": 32,
+      "accum": 1,
+      "revision": "32e28c05b47e33b6675d2670a1745c50a65e987a"
+    },
+    {
+      "name": "02_indobert_p1",
+      "id": "indobenchmark/indobert-base-p1",
+      "family": "uncased",
+      "batch": 32,
+      "accum": 1,
+      "revision": "c2cd0b51ddce6580eb35263b39b0a1e5fb0a39e2"
+    },
+    {
+      "name": "03_xlm_roberta",
+      "id": "FacebookAI/xlm-roberta-base",
+      "family": "cased",
+      "batch": 16,
+      "accum": 2,
+      "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089"
+    },
+    {
+      "name": "04_indobert_indolem",
+      "id": "indolem/indobert-base-uncased",
+      "family": "uncased",
+      "batch": 32,
+      "accum": 1,
+      "revision": "7ccb3cd0f5b08ffbaa465aade22328e8600e23eb"
+    },
+    {
+      "name": "05_nusabert",
+      "id": "LazarusNLP/NusaBERT-base",
+      "family": "uncased",
+      "batch": 32,
+      "accum": 1,
+      "revision": "e52beecf63a65daeae103c4fe8ad6edbf3e9743b"
+    }
+  ],
+  "runs_completed": 10,
+  "epochs": 3,
+  "max_len": 192,
+  "learning_rate": 2e-05,
+  "weight_power": 0.5,
+  "selection": {
+    "best_run": "02_indobert_p1__native",
+    "selected_runs": [
+      "02_indobert_p1__native",
+      "01_indobertweet__normalized",
+      "04_indobert_indolem__native",
+      "03_xlm_roberta__native",
+      "05_nusabert__native"
+    ],
+    "method": "ensemble",
+    "thresholds": [
+      0.5,
+      0.0,
+      0.4
+    ],
+    "class_bias": [
+      0.3,
+      1.0,
+      0.0
+    ],
+    "ensemble_weights": [
+      0.4322783287582675,
+      0.11101768364067127,
+      0.2003073342633165,
+      0.20253296339746985,
+      0.05386368994027496
+    ],
+    "temperature": 1.2007778957139825,
+    "rule_gate": 0.0,
+    "ensemble_bias": [
+      -0.3,
+      0.6,
+      0.0
+    ],
+    "classes": [
+      "negative",
+      "neutral",
+      "positive"
+    ]
+  },
+  "final_holdout": {
+    "macro_f1": 0.7776910812736357,
+    "weighted_f1": 0.8661754878600125,
+    "accuracy": 0.8677517802644964,
+    "balanced_acc": 0.7641335932282924
+  },
+  "final_probability_metrics": {
+    "NLL": 0.3813523640282218,
+    "Brier_sum": 0.20147356451652648,
+    "ECE_argmax_10bins": 0.10059805417638229
+  },
+  "gpu": "Tesla T4",
+  "gpu_count": 2,
+  "elapsed_seconds": 2390.893403085,
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "tokenizers": "0.23.3"
+  }
+}

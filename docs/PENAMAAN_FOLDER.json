@@ -1,0 +1,51 @@
+{
+  "convention": "lowercase snake_case; folder names only",
+  "renames": [
+    {
+      "old": "Notebook",
+      "new": "notebook"
+    },
+    {
+      "old": "Persiapan_Offline",
+      "new": "persiapan_offline"
+    },
+    {
+      "old": "Toolkit",
+      "new": "toolkit"
+    },
+    {
+      "old": "Notebook/A_tanpa_label",
+      "new": "notebook/a_tanpa_label"
+    },
+    {
+      "old": "Notebook/B_klasifikasi",
+      "new": "notebook/b_klasifikasi"
+    },
+    {
+      "old": "Notebook/C_regresi",
+      "new": "notebook/c_regresi"
+    },
+    {
+      "old": "Notebook/D_label_per_token",
+      "new": "notebook/d_label_per_token"
+    },
+    {
+      "old": "Notebook/EDA_universal",
+      "new": "notebook/eda_universal"
+    },
+    {
+      "old": "Notebook/E_pasangan_teks",
+      "new": "notebook/e_pasangan_teks"
+    },
+    {
+      "old": "Notebook/F_generatif",
+      "new": "notebook/f_generatif"
+    },
+    {
+      "old": "Notebook/Preprocessing_universal",
+      "new": "notebook/preprocessing_universal"
+    }
+  ],
+  "protected_input_files_verified": 135,
+  "all_folder_names_valid": true
+}

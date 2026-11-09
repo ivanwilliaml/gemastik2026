@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-08",
+  "bytes_before": 529610747,
+  "bytes_after": 331975263,
+  "files_before": 893,
+  "files_after": 690,
+  "protected_originals_verified": 71,
+  "broken_documentation_links": [],
+  "toolkit_assets_verified": 20,
+  "preprocessing_tests_passed": 22,
+  "notebook_real_rows": 57362,
+  "notebook_code_cells_passed": 82,
+  "compression_content_verified": true,
+  "cache_directories_remaining": [],
+  "bytes_saved": 197635484
+}

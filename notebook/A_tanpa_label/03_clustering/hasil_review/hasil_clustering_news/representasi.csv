@@ -1,0 +1,6 @@
+representasi,input,dimensi,detik,baris_vektor_nol_%,OOV_token_%,terpotong_%
+tfidf,bow_stem,3548,0.12078962000003912,0.16,,
+lsa,bow_stem,100,0.2878477159999875,0.16,,
+word2vec,bow_stem,100,3.441923830999997,0.02,12.724915737619913,
+indobert_mean,embed lowercase,768,17.112326773000007,0.0,,0.0
+e5,query: + embed,768,4.29799996481961e-06,0.0,,0.0

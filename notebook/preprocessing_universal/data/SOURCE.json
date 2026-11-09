@@ -1,0 +1,8 @@
+{
+  "original_local_path": "D:\\comp\\bundle\\data_ext\\mbg\\MBG_PROCESSED.csv",
+  "local_copy": "MBG_PROCESSED.csv",
+  "rows": 57362,
+  "text_column": "comment",
+  "sha256": "d8d1da42d483975a8a4140d9babfc0f759e07e96ad6ff4482bdc38b3ea2b659b",
+  "note": "Original comments are used, not clean_comment. Sentiment columns are automatic model outputs, not gold annotations. Source CSV is kept local and excluded from Git."
+}

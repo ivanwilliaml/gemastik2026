@@ -1,0 +1,6 @@
+{
+  "similarity": "e_pasangan_teks/20_kemiripan/20_kemiripan_review.ipynb",
+  "nli3": "e_pasangan_teks/21_nli/21_nli_review.ipynb",
+  "retrieval": "e_pasangan_teks/22_retrieval/22_retrieval_review.ipynb",
+  "temporal": "a_tanpa_label/02_tren_topik_waktu/02_tren_topik_waktu_review.ipynb"
+}

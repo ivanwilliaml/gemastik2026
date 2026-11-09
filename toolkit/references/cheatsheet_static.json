@@ -1,0 +1,9 @@
+{
+  "static": "passed",
+  "tasks": 43,
+  "flows": 25,
+  "full_original_pipeline_equivalence": true,
+  "full_snippets_checked": 142,
+  "local_ml_execution": false,
+  "runtime": "No new runtime claim; earlier short-code tests do not validate this restored full-code version."
+}

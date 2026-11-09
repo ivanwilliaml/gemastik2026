@@ -1,0 +1,385 @@
+[{"stream_name":"stderr","time":6.74858481,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.748629103,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.748633397,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.748635957,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.320988875,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.321024735,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.321030336,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.321034073,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":20.052083387,"data":"{\"test\": \"masked_unknown_not_negative\", \"ok\": true, \"seconds\": 0.01406088499999214}\n"}
+,{"stream_name":"stdout","time":20.052914809,"data":"{\"test\": \"masked_no_known\", \"ok\": true, \"seconds\": 0.0001221740000119098}\n"}
+,{"stream_name":"stdout","time":20.092639382,"data":"{\"test\": \"negation_preserved\", \"ok\": true, \"seconds\": 0.03915012499999193}\n"}
+,{"stream_name":"stdout","time":20.100954657,"data":"{\"test\": \"connected_endpoints_and_normalization_collision\", \"ok\": true, \"seconds\": 0.007483742999966125}\n"}
+,{"stream_name":"stdout","time":20.261699307,"data":"Baris invalid dibuang: 0\n"}
+,{"stream_name":"stdout","time":20.263257384,"data":"Split baris: {'train': 72, 'val': 24, 'test': 24} | label order: ['0', '1', '2']\n"}
+,{"stream_name":"stdout","time":21.639571899,"data":"\n"}
+,{"stream_name":"stdout","time":21.639597018,"data":"Validation cross-fit (pengembangan, bukan test)\n"}
+,{"stream_name":"stdout","time":21.686449721,"data":"\n"}
+,{"stream_name":"stdout","time":21.686470189,"data":"Holdout · pilihan sudah dibekukan\n"}
+,{"stream_name":"stdout","time":21.689651179,"data":"\n"}
+,{"stream_name":"stdout","time":21.689666845,"data":"Kelemahan per kondisi\n"}
+,{"stream_name":"stdout","time":21.691355431,"data":"{\"test\": \"classification_linear_pipeline\", \"ok\": true, \"seconds\": 1.5883543280000367}\n"}
+,{"stream_name":"stdout","time":21.839374425,"data":"Baris invalid dibuang: 0\n"}
+,{"stream_name":"stdout","time":21.839397911,"data":"Split baris: {'train': 72, 'val': 24, 'test': 24} | label order: ['HS', 'Abusive']\n"}
+,{"stream_name":"stdout","time":23.976811055,"data":"\n"}
+,{"stream_name":"stdout","time":23.976841717,"data":"Validation cross-fit (pengembangan, bukan test)\n"}
+,{"stream_name":"stdout","time":24.0345405,"data":"\n"}
+,{"stream_name":"stdout","time":24.034568978,"data":"Holdout · pilihan sudah dibekukan\n"}
+,{"stream_name":"stdout","time":24.037727368,"data":"\n"}
+,{"stream_name":"stdout","time":24.037744589,"data":"Kelemahan per kondisi\n"}
+,{"stream_name":"stdout","time":24.039472123,"data":"{\"test\": \"multilabel_linear_pipeline\", \"ok\": true, \"seconds\": 2.3476081739999586}\n"}
+,{"stream_name":"stdout","time":24.169052785,"data":"Baris invalid dibuang: 0\n"}
+,{"stream_name":"stdout","time":24.169070767,"data":"Split baris: {'train': 72, 'val': 24, 'test': 24} | label order: ['score']\n"}
+,{"stream_name":"stdout","time":24.169076811,"data":"\n"}
+,{"stream_name":"stdout","time":24.169080788,"data":"Validation cross-fit (pengembangan, bukan test)\n"}
+,{"stream_name":"stdout","time":24.190257213,"data":"\n"}
+,{"stream_name":"stdout","time":24.190273784,"data":"Holdout · pilihan sudah dibekukan\n"}
+,{"stream_name":"stdout","time":24.19326996,"data":"\n"}
+,{"stream_name":"stdout","time":24.193285822,"data":"Kelemahan per kondisi\n"}
+,{"stream_name":"stdout","time":24.195572458,"data":"{\"test\": \"similarity_linear_pipeline\", \"ok\": true, \"seconds\": 0.1541205199999922}\n"}
+,{"stream_name":"stdout","time":24.243813801,"data":"Baris invalid dibuang: 0\n"}
+,{"stream_name":"stdout","time":24.27339689,"data":"Split baris: {'train': 72, 'val': 24, 'test': 24} | label order: ['entailment', 'neutral', 'contradiction']\n"}
+,{"stream_name":"stdout","time":25.766593748,"data":"\n"}
+,{"stream_name":"stdout","time":25.766632331,"data":"Validation cross-fit (pengembangan, bukan test)\n"}
+,{"stream_name":"stdout","time":25.805937902,"data":"\n"}
+,{"stream_name":"stdout","time":25.805968242,"data":"Holdout · pilihan sudah dibekukan\n"}
+,{"stream_name":"stdout","time":25.809361312,"data":"\n"}
+,{"stream_name":"stdout","time":25.809383783,"data":"Kelemahan per kondisi\n"}
+,{"stream_name":"stdout","time":25.810907809,"data":"{\"test\": \"nli_linear_pipeline\", \"ok\": true, \"seconds\": 1.6146840739999675}\n"}
+,{"stream_name":"stdout","time":25.847402015,"data":"Corpus: 30 | query validation/test: 6 6\n"}
+,{"stream_name":"stdout","time":25.847430035,"data":"Duplikat dokumen: 0 | judgment per query: count    12.0\n"}
+,{"stream_name":"stdout","time":25.847437125,"data":"mean      2.0\n"}
+,{"stream_name":"stdout","time":25.847441213,"data":"std       0.0\n"}
+,{"stream_name":"stdout","time":25.847445269,"data":"min       2.0\n"}
+,{"stream_name":"stdout","time":25.847449009,"data":"25%       2.0\n"}
+,{"stream_name":"stdout","time":25.847453095,"data":"50%       2.0\n"}
+,{"stream_name":"stdout","time":25.847456998,"data":"75%       2.0\n"}
+,{"stream_name":"stdout","time":25.84746104,"data":"max       2.0\n"}
+,{"stream_name":"stdout","time":25.84746477,"data":"Name: gold, dtype: float64\n"}
+,{"stream_name":"stdout","time":25.847468295,"data":"\n"}
+,{"stream_name":"stdout","time":25.847471635,"data":"validation\n"}
+,{"stream_name":"stdout","time":25.854499342,"data":"\n"}
+,{"stream_name":"stdout","time":25.854516196,"data":"holdout\n"}
+,{"stream_name":"stdout","time":25.862635983,"data":"\n"}
+,{"stream_name":"stdout","time":25.862661313,"data":"errors_and_rankings\n"}
+,{"stream_name":"stdout","time":25.865603785,"data":"FINAL (validation): tfidf | Judgment yang tidak lengkap dapat menurunkan Recall/NDCG secara semu.\n"}
+,{"stream_name":"stdout","time":25.865625787,"data":"{\"test\": \"multi_relevance_retrieval\", \"ok\": true, \"seconds\": 0.05290692700003774}\n"}
+,{"stream_name":"stdout","time":26.161320308,"data":"\n"}
+,{"stream_name":"stdout","time":26.161351625,"data":"validation\n"}
+,{"stream_name":"stdout","time":26.165586707,"data":"\n"}
+,{"stream_name":"stdout","time":26.165613606,"data":"topics\n"}
+,{"stream_name":"stdout","time":26.170035002,"data":"\n"}
+,{"stream_name":"stdout","time":26.170050035,"data":"late_quality\n"}
+,{"stream_name":"stdout","time":26.172505144,"data":"FINAL: nmf_k2 | NPMI/silhouette bukan bukti kebenaran semantik; audit contoh per topik/cluster.\n"}
+,{"stream_name":"stdout","time":26.172525458,"data":"{\"test\": \"topic_pipeline\", \"ok\": true, \"seconds\": 0.3046475499999701}\n"}
+,{"stream_name":"stdout","time":26.420018795,"data":"\n"}
+,{"stream_name":"stdout","time":26.420052802,"data":"validation\n"}
+,{"stream_name":"stdout","time":26.424078168,"data":"\n"}
+,{"stream_name":"stdout","time":26.424102428,"data":"topics\n"}
+,{"stream_name":"stdout","time":26.427716389,"data":"\n"}
+,{"stream_name":"stdout","time":26.427739381,"data":"late_quality\n"}
+,{"stream_name":"stdout","time":26.429318793,"data":"FINAL: lda_k2 | NPMI/silhouette bukan bukti kebenaran semantik; audit contoh per topik/cluster.\n"}
+,{"stream_name":"stdout","time":26.429335058,"data":"{\"test\": \"clustering_pipeline\", \"ok\": true, \"seconds\": 0.2571143369999618}\n"}
+,{"stream_name":"stdout","time":26.622083808,"data":"Tanggal invalid dibuang: 0\n"}
+,{"stream_name":"stdout","time":26.622107173,"data":"Recurring exact-text rows vs early, val : 0\n"}
+,{"stream_name":"stdout","time":26.622113299,"data":"Recurring exact-text rows vs early, test : 0\n"}
+,{"stream_name":"stdout","time":26.69455251,"data":"\n"}
+,{"stream_name":"stdout","time":26.694581756,"data":"validation\n"}
+,{"stream_name":"stdout","time":26.698746678,"data":"\n"}
+,{"stream_name":"stdout","time":26.698764093,"data":"topics\n"}
+,{"stream_name":"stdout","time":26.70239377,"data":"\n"}
+,{"stream_name":"stdout","time":26.702408895,"data":"late_quality\n"}
+,{"stream_name":"stdout","time":26.738587012,"data":"FINAL: lda_k2 | NPMI/silhouette bukan bukti kebenaran semantik; audit contoh per topik/cluster.\n"}
+,{"stream_name":"stdout","time":26.738604248,"data":"\n"}
+,{"stream_name":"stdout","time":26.738608741,"data":"Proporsi topik dan support per periode\n"}
+,{"stream_name":"stdout","time":26.744461524,"data":"\n"}
+,{"stream_name":"stdout","time":26.744477715,"data":"Perubahan distribusi, bukan uji kausalitas\n"}
+,{"stream_name":"stdout","time":26.790007993,"data":"\n"}
+,{"stream_name":"stdout","time":26.790033927,"data":"lexicon · proporsi sampel, bukan accuracy\n"}
+,{"stream_name":"stdout","time":26.796865589,"data":"Tanpa gold: agreement bukan accuracy. Sampel per periode tidak boleh digabung tanpa bobot volume.\n"}
+,{"stream_name":"stdout","time":26.796897095,"data":"{\"test\": \"temporal_pipeline\", \"ok\": true, \"seconds\": 0.36711509399998477}\n"}
+,{"stream_name":"stdout","time":26.800977963,"data":"{\"test\": \"calibration_duplicate_rare_threshold\", \"ok\": true, \"seconds\": 0.003280682000024626}\n"}
+,{"stream_name":"stdout","time":44.418327893,"data":"{\"test\": \"word2vec_train_only\", \"ok\": true, \"seconds\": 17.601667971999973}\n"}
+,{"stream_name":"stderr","time":64.510787582,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":64.510823688,"data":"\n"}
+,{"stream_name":"stderr","time":64.510829582,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":64.511733674,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":64.511753649,"data":"\n"}
+,{"stream_name":"stderr","time":64.511759327,"data":"WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":66.989618474,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `2`.\n"}
+,{"stream_name":"stderr","time":66.989645861,"data":"\n"}
+,{"stream_name":"stderr","time":66.989651415,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `2`.\n"}
+,{"stream_name":"stderr","time":73.975185715,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indolem/indobertweet-base-uncased\n"}
+,{"stream_name":"stderr","time":73.975217895,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":73.975223015,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":73.975226916,"data":"cls.predictions.decoder.weight             | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975251895,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.97525606,"data":"cls.predictions.decoder.bias               | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.97525982,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.97526388,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975268012,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975271641,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975275335,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":73.975278828,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":73.975282784,"data":"\n"}
+,{"stream_name":"stderr","time":73.975286284,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":73.97528993,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":73.975294047,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":73.975298477,"data":"\n"}
+,{"stream_name":"stderr","time":73.975301962,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indolem/indobertweet-base-uncased\n"}
+,{"stream_name":"stderr","time":73.975306559,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":73.975310773,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":73.975315036,"data":"cls.predictions.decoder.weight             | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.97531939,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.97532321,"data":"cls.predictions.decoder.bias               | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975326404,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.9753297,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.97533333,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975337079,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":73.975340563,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":73.975344548,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":73.975348067,"data":"\n"}
+,{"stream_name":"stderr","time":73.975351205,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":73.975354799,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":73.975371325,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":77.618225634,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":77.61828934,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":77.618295413,"data":"\n"}
+,{"stream_name":"stderr","time":77.62065502,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":77.620807409,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":78.25041718,"data":"{'loss': '2.061', 'grad_norm': '17.65', 'learning_rate': '2e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":78.250469094,"data":"{'eval_loss': '1.953', 'eval_selection': '0.09524', 'eval_runtime': '0.127', 'eval_samples_per_second': '94.45', 'eval_steps_per_second': '7.871', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":80.615690236,"data":"{'train_runtime': '5.474', 'train_samples_per_second': '2.192', 'train_steps_per_second': '0.183', 'train_loss': '2.061', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":81.670385363,"data":"{\"test\": \"neural_indobertweet\", \"ok\": true, \"seconds\": 37.26440515600001}\n"}
+,{"stream_name":"stderr","time":84.623387936,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":84.623412104,"data":"\n"}
+,{"stream_name":"stderr","time":84.623417997,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":90.554072125,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":90.554108992,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":90.554114813,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":90.55411954,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":90.554123816,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":90.55412844599999,"data":"\n"}
+,{"stream_name":"stderr","time":90.554132835,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":90.55413736,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":90.554142355,"data":"\n"}
+,{"stream_name":"stderr","time":90.554146325,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":90.554150972,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":90.554155543,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":90.554160004,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":90.554164058,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":90.554168887,"data":"\n"}
+,{"stream_name":"stderr","time":90.554173581,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":90.554191764,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":91.48153827,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":91.481570029,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":91.481573923,"data":"\n"}
+,{"stream_name":"stderr","time":91.481576199,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":91.481578882,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":91.497134063,"data":"{'loss': '2.236', 'grad_norm': '18.13', 'learning_rate': '2e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":91.497155279,"data":"{'eval_loss': '1.77', 'eval_selection': '1', 'eval_runtime': '0.0718', 'eval_samples_per_second': '167.1', 'eval_steps_per_second': '13.93', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":92.21882361,"data":"{'train_runtime': '0.822', 'train_samples_per_second': '14.6', 'train_steps_per_second': '1.217', 'train_loss': '2.236', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":93.667755066,"data":"{\"test\": \"neural_indobert_p1\", \"ok\": true, \"seconds\": 11.98706936100001}\n"}
+,{"stream_name":"stderr","time":111.997795431,"data":"[transformers] \u001b[1mXLMRobertaForSequenceClassification LOAD REPORT\u001b[0m from: FacebookAI/xlm-roberta-base\n"}
+,{"stream_name":"stderr","time":111.997838331,"data":"Key                         | Status     | \n"}
+,{"stream_name":"stderr","time":111.99784494,"data":"----------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":111.997853297,"data":"lm_head.dense.weight        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997857472,"data":"roberta.pooler.dense.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997861516,"data":"lm_head.dense.bias          | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997865637,"data":"roberta.pooler.dense.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997893417,"data":"lm_head.bias                | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997897313,"data":"lm_head.layer_norm.weight   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997900228,"data":"lm_head.layer_norm.bias     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997903295,"data":"classifier.dense.bias       | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997906293,"data":"classifier.dense.weight     | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997909347,"data":"classifier.out_proj.weight  | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997918643,"data":"classifier.out_proj.bias    | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997921953,"data":"\n"}
+,{"stream_name":"stderr","time":111.99792485,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":111.997927814,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":111.997931057,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":111.997934343,"data":"\n"}
+,{"stream_name":"stderr","time":111.99794545,"data":"[transformers] \u001b[1mXLMRobertaForSequenceClassification LOAD REPORT\u001b[0m from: FacebookAI/xlm-roberta-base\n"}
+,{"stream_name":"stderr","time":111.997948242,"data":"Key                         | Status     | \n"}
+,{"stream_name":"stderr","time":111.997950584,"data":"----------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":111.997952913,"data":"lm_head.dense.weight        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.9979553,"data":"roberta.pooler.dense.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997957623,"data":"lm_head.dense.bias          | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997959953,"data":"roberta.pooler.dense.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997962275,"data":"lm_head.bias                | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997964675,"data":"lm_head.layer_norm.weight   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997966983,"data":"lm_head.layer_norm.bias     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":111.997969302,"data":"classifier.dense.bias       | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997971615,"data":"classifier.dense.weight     | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997974019,"data":"classifier.out_proj.weight  | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.99797632,"data":"classifier.out_proj.bias    | MISSING    | \n"}
+,{"stream_name":"stderr","time":111.997978655,"data":"\n"}
+,{"stream_name":"stderr","time":111.997980881,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":111.997983267,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":111.997985841,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":113.274806517,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":113.274847299,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":113.274854522,"data":"\n"}
+,{"stream_name":"stderr","time":113.274858011,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":113.274862584,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":113.439599789,"data":"{'loss': '2.078', 'grad_norm': '5.437', 'learning_rate': '2e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":113.439626563,"data":"{'eval_loss': '2.338', 'eval_selection': '0.09524', 'eval_runtime': '0.1397', 'eval_samples_per_second': '85.9', 'eval_steps_per_second': '7.158', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":114.994881574,"data":"{'train_runtime': '1.975', 'train_samples_per_second': '6.075', 'train_steps_per_second': '0.506', 'train_loss': '2.078', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":117.521221148,"data":"{\"test\": \"neural_xlmr\", \"ok\": true, \"seconds\": 23.853697934000024}\n"}
+,{"stream_name":"stderr","time":120.469964608,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `2`.\n"}
+,{"stream_name":"stderr","time":120.469991522,"data":"\n"}
+,{"stream_name":"stderr","time":120.470009279,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `2`.\n"}
+,{"stream_name":"stderr","time":129.116525632,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indolem/indobert-base-uncased\n"}
+,{"stream_name":"stderr","time":129.116561296,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":129.116570432,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":129.116573109,"data":"cls.predictions.decoder.weight             | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116575596,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116578077,"data":"cls.predictions.decoder.bias               | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116580503,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116582945,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.1165854,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116587877,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116590244,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":129.116592607,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":129.116594993,"data":"\n"}
+,{"stream_name":"stderr","time":129.116597394,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":129.116599723,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":129.116602395,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":129.116604963,"data":"\n"}
+,{"stream_name":"stderr","time":129.116607277,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indolem/indobert-base-uncased\n"}
+,{"stream_name":"stderr","time":129.116609854,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":129.116612235,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":129.116614596,"data":"cls.predictions.decoder.weight             | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116616995,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116619327,"data":"cls.predictions.decoder.bias               | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116621685,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116624042,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116626399,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116628747,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":129.116631123,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":129.11663346,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":129.11663589,"data":"\n"}
+,{"stream_name":"stderr","time":129.116638111,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":129.116655681,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":129.116658516,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":130.002265033,"data":"{'loss': '1.991', 'grad_norm': '43.52', 'learning_rate': '2e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":130.002293235,"data":"{'eval_loss': '2.147', 'eval_selection': '0.3241', 'eval_runtime': '0.0669', 'eval_samples_per_second': '179.4', 'eval_steps_per_second': '14.95', 'epoch': '1'}\n"}
+,{"stream_name":"stderr","time":130.003684532,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":130.003703965,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":130.00370819,"data":"\n"}
+,{"stream_name":"stderr","time":130.00371171,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":130.00371612,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":130.64520242,"data":"{'train_runtime': '0.7081', 'train_samples_per_second': '16.95', 'train_steps_per_second': '1.412', 'train_loss': '1.991', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":131.701798646,"data":"{\"test\": \"neural_indolem\", \"ok\": true, \"seconds\": 14.179078736000008}\n"}
+,{"stream_name":"stderr","time":137.660595192,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":137.660621747,"data":"\n"}
+,{"stream_name":"stderr","time":137.660625974,"data":"[transformers] You passed `num_labels=3` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":144.831782572,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: LazarusNLP/NusaBERT-base\n"}
+,{"stream_name":"stderr","time":144.831821723,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":144.83182923,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":144.831834622,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831844757,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.83185022,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831855916,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831861867,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831867573,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831872767,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831877797,"data":"bert.pooler.dense.weight                   | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.83188327,"data":"bert.pooler.dense.bias                     | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831888707,"data":"\n"}
+,{"stream_name":"stderr","time":144.831904201,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":144.831909156,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":144.831914516,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":144.831919756,"data":"\n"}
+,{"stream_name":"stderr","time":144.831933024,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: LazarusNLP/NusaBERT-base\n"}
+,{"stream_name":"stderr","time":144.831937993,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":144.83194281,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":144.831947924,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831952765,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831956954,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.83196156,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.83196566,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":144.831969561,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831973805,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831977974,"data":"bert.pooler.dense.weight                   | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831982142,"data":"bert.pooler.dense.bias                     | MISSING    | \n"}
+,{"stream_name":"stderr","time":144.831986543,"data":"\n"}
+,{"stream_name":"stderr","time":144.83199124,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":144.831996006,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":144.832001175,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":145.729211315,"data":"{'loss': '2.248', 'grad_norm': '127.7', 'learning_rate': '2e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":145.729254247,"data":"{'eval_loss': '2.239', 'eval_selection': '0.1944', 'eval_runtime': '0.0672', 'eval_samples_per_second': '178.6', 'eval_steps_per_second': '14.88', 'epoch': '1'}\n"}
+,{"stream_name":"stderr","time":145.730582594,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":145.730595107,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":145.730599272,"data":"\n"}
+,{"stream_name":"stderr","time":145.73060274,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":145.730607633,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":146.391554684,"data":"{'train_runtime': '0.7294', 'train_samples_per_second': '16.45', 'train_steps_per_second': '1.371', 'train_loss': '2.248', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":147.48875743,"data":"{\"test\": \"neural_nusabert\", \"ok\": true, \"seconds\": 15.784452380999994}\n"}
+,{"stream_name":"stderr","time":148.483531778,"data":"[transformers] You passed `num_labels=2` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":148.483578176,"data":"\n"}
+,{"stream_name":"stderr","time":148.483581589,"data":"[transformers] You passed `num_labels=2` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":149.254315593,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":149.254346079,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":149.254351783,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":149.25435549,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":149.254359065,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":149.254362678,"data":"\n"}
+,{"stream_name":"stderr","time":149.254366077,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":149.254371446,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":149.254380947,"data":"\n"}
+,{"stream_name":"stderr","time":149.254383733,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":149.254386448,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":149.254388865,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":149.254391278,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":149.254393733,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":149.254396174,"data":"\n"}
+,{"stream_name":"stderr","time":149.254398507,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":149.254400984,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":150.312112257,"data":"{'loss': '0.7161', 'grad_norm': '2.256', 'learning_rate': '2e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":150.312142817,"data":"{'eval_loss': '0.7441', 'eval_selection': '0.5577', 'eval_runtime': '0.0761', 'eval_samples_per_second': '157.7', 'eval_steps_per_second': '13.14', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":150.963716248,"data":"{'train_runtime': '0.8298', 'train_samples_per_second': '14.46', 'train_steps_per_second': '1.205', 'train_loss': '0.7161', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":152.08310539,"data":"{\"test\": \"neural_multilabel_loss\", \"ok\": true, \"seconds\": 4.592140301000029}\n"}
+,{"stream_name":"stderr","time":153.05887078,"data":"[transformers] You passed `num_labels=1` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":153.058899385,"data":"\n"}
+,{"stream_name":"stderr","time":153.058903466,"data":"[transformers] You passed `num_labels=1` which is incompatible to the `id2label` map of length `5`.\n"}
+,{"stream_name":"stderr","time":153.841867182,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":153.84189983,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":153.841903448,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":153.841916622,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":153.841919955,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":153.841942579,"data":"\n"}
+,{"stream_name":"stderr","time":153.841947007,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":153.841951596,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":153.841956647,"data":"\n"}
+,{"stream_name":"stderr","time":153.84196112,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: indobenchmark/indobert-base-p1\n"}
+,{"stream_name":"stderr","time":153.84196596,"data":"Key               | Status  | \n"}
+,{"stream_name":"stderr","time":153.841970154,"data":"------------------+---------+-\n"}
+,{"stream_name":"stderr","time":153.841973967,"data":"classifier.weight | MISSING | \n"}
+,{"stream_name":"stderr","time":153.841977748,"data":"classifier.bias   | MISSING | \n"}
+,{"stream_name":"stderr","time":153.841981473,"data":"\n"}
+,{"stream_name":"stderr","time":153.84198512,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":153.841988787,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":155.425823768,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":155.425862418,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stderr","time":155.425866863,"data":"\n"}
+,{"stream_name":"stderr","time":155.425870175,"data":"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py:596: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n"}
+,{"stream_name":"stderr","time":155.425874681,"data":"  return super().apply(*args, **kwargs)  # type: ignore[misc]\n"}
+,{"stream_name":"stdout","time":155.933662932,"data":"{'loss': '13.22', 'grad_norm': '224.8', 'learning_rate': '1e-05', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":155.971874046,"data":"{'eval_loss': '5.575', 'eval_selection': '-1.67', 'eval_runtime': '0.358', 'eval_samples_per_second': '33.52', 'eval_steps_per_second': '2.794', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":156.632444546,"data":"{'train_runtime': '1.877', 'train_samples_per_second': '12.79', 'train_steps_per_second': '1.066', 'train_loss': '13.22', 'epoch': '1'}\n"}
+,{"stream_name":"stdout","time":157.93018509,"data":"{\"test\": \"neural_similarity_loss\", \"ok\": true, \"seconds\": 5.845663247999994}\n"}
+,{"stream_name":"stdout","time":181.549190897,"data":"{\"test\": \"e5_pooling_prefix\", \"ok\": true, \"seconds\": 23.61722837100001}\n"}
+,{"stream_name":"stdout","time":196.262053,"data":"{\"test\": \"nli_pretrained_label_mapping\", \"ok\": true, \"seconds\": 14.709720624}\n"}
+,{"stream_name":"stdout","time":205.21204637,"data":"{\"test\": \"sentiment_pretrained_label_mapping\", \"ok\": true, \"seconds\": 8.948052013999984}\n"}
+,{"stream_name":"stdout","time":215.961381037,"data":"{\"test\": \"cross_encoder_retrieval\", \"ok\": true, \"seconds\": 10.745489182000028}\n"}
+,{"stream_name":"stdout","time":215.962204169,"data":"COMPOSER_SMOKE_COMPLETE 25 passed 25\n"}
+,{"stream_name":"stderr","time":222.383239529,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":222.383270357,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":222.549765962,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":222.549790911,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":223.317045047,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":223.549680856,"data":"[NbConvertApp] Writing 1346690 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":225.992429292,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":226.620857996,"data":"[NbConvertApp] Writing 1355405 bytes to __results__.html\n"}
+]

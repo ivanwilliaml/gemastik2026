@@ -1,0 +1,88 @@
+{
+  "dataset": "gojek",
+  "rows": 224923,
+  "unique": 134606,
+  "n_fit": 30000,
+  "bow_view": "bow",
+  "base": "nmf_k10",
+  "k_final": 10,
+  "transfer_ARI": 0.9998986218675823,
+  "post": [
+    "6219 outlier"
+  ],
+  "minutes": 26.26264699256667,
+  "times": [
+    {
+      "tahap": "muat_data",
+      "detik": 2.1102603910001108,
+      "n": null
+    },
+    {
+      "tahap": "eda",
+      "detik": 4.59638004999988,
+      "n": 134606
+    },
+    {
+      "tahap": "preprocessing",
+      "detik": 39.01423867100016,
+      "n": 134606
+    },
+    {
+      "tahap": "stemming",
+      "detik": 347.26297799999975,
+      "n": 134606
+    },
+    {
+      "tahap": "embed_e5_penuh",
+      "detik": 71.38564303200019,
+      "n": 134606
+    },
+    {
+      "tahap": "ablasi",
+      "detik": 17.3855337949999,
+      "n": 30000
+    },
+    {
+      "tahap": "grid_sampel",
+      "detik": 867.8287413899998,
+      "n": 30000
+    },
+    {
+      "tahap": "bertopic_sampel",
+      "detik": 180.64071185300008,
+      "n": 30000
+    },
+    {
+      "tahap": "c_v",
+      "detik": 5.404092020000007,
+      "n": 30000
+    },
+    {
+      "tahap": "terapkan_penuh",
+      "detik": 1.273960012000316,
+      "n": 134606
+    },
+    {
+      "tahap": "post_processing",
+      "detik": 4.263550202999795,
+      "n": 134606
+    }
+  ],
+  "final": {
+    "stability": NaN,
+    "outlier_%": 0.0,
+    "max_share_%": 18.31204456636271,
+    "NPMI": 0.10382876388404916,
+    "diversity": 0.56,
+    "TQ": 0.3090720538875338,
+    "min_cluster_size": NaN
+  },
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "umap-learn": "0.5.12",
+    "gensim": "4.4.0"
+  }
+}

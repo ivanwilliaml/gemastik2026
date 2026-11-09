@@ -1,0 +1,163 @@
+{
+  "kernel": "ivanwllm/gemastik-cheatsheet-audit",
+  "version": "v1",
+  "status": "ERROR",
+  "failureMessage": null,
+  "local_ml_execution": false,
+  "scope": "Synthetic contract smoke, not benchmark accuracy",
+  "live_tests": [],
+  "live_summary": {
+    "passed": 0,
+    "failed": 0
+  },
+  "validation": {
+    "results": [
+      {
+        "test": "classification",
+        "ok": true,
+        "seconds": 2.0853561600000035
+      },
+      {
+        "test": "multilabel",
+        "ok": true,
+        "seconds": 0.1320791659999827
+      },
+      {
+        "test": "absa",
+        "ok": true,
+        "seconds": 0.13124796900001456
+      },
+      {
+        "test": "topic",
+        "ok": true,
+        "seconds": 0.14852493799998
+      },
+      {
+        "test": "clustering",
+        "ok": true,
+        "seconds": 0.2743119110000407
+      },
+      {
+        "test": "temporal",
+        "ok": true,
+        "seconds": 0.15651883199996064
+      },
+      {
+        "test": "weak",
+        "ok": true,
+        "seconds": 0.05519883699997763
+      },
+      {
+        "test": "semi",
+        "ok": true,
+        "seconds": 0.09121909600003164
+      },
+      {
+        "test": "pair",
+        "ok": true,
+        "seconds": 1.1937569049999865
+      },
+      {
+        "test": "similarity",
+        "ok": true,
+        "seconds": 0.11476292899999407
+      },
+      {
+        "test": "retrieval",
+        "ok": true,
+        "seconds": 0.026471585000024334
+      },
+      {
+        "test": "ranking",
+        "ok": true,
+        "seconds": 7.707779799999969
+      },
+      {
+        "test": "regression",
+        "ok": true,
+        "seconds": 0.07072368299998288
+      },
+      {
+        "test": "neighbors",
+        "ok": true,
+        "seconds": 0.09173889300001292
+      },
+      {
+        "test": "anomaly",
+        "ok": true,
+        "seconds": 0.3983598659999643
+      },
+      {
+        "test": "keyword",
+        "ok": true,
+        "seconds": 0.06400939200000266
+      },
+      {
+        "test": "qa",
+        "ok": true,
+        "seconds": 0.09036757800004125
+      },
+      {
+        "test": "ner",
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_23/540233236.py\", line 42, in check\n    try:fn();row={'test':name,'ok':True,'seconds':time.monotonic()-start}\n        ~~^^\n  File \"/tmp/ipykernel_23/540233236.py\", line 52, in <lambda>\n    for flow in payload['flows']:check(flow['id'],lambda flow=flow:run(flow))\n                                                                   ~~~^^^^^^\n  File \"/tmp/ipykernel_23/540233236.py\", line 50, in run\n    exec(compile(payload['cards'][key]['code'],'<cheat:'+key+'>','exec'),ns)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<cheat:ner_eval>\", line 3, in <module>\n  File \"/usr/local/lib/python3.13/dist-packages/seqeval/metrics/sequence_labeling.py\", line 680, in classification_report\n    target_names_pred = {type_name for type_name, _, _ in get_entities(y_pred, suffix)}\n                                                          ~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/seqeval/metrics/sequence_labeling.py\", line 182, in get_entities\n    _validate_chunk(chunk, suffix)\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/seqeval/metrics/sequence_labeling.py\", line 162, in _validate_chunk\n    if chunk in ['O', 'B', 'I', 'E', 'S']:\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()\n"
+      },
+      {
+        "test": "pos",
+        "ok": true,
+        "seconds": 0.03777924399997801
+      },
+      {
+        "test": "summary",
+        "ok": true,
+        "seconds": 0.05556844400001637
+      },
+      {
+        "test": "extract",
+        "ok": true,
+        "seconds": 0.05530808700001444
+      },
+      {
+        "test": "normalization",
+        "ok": true,
+        "seconds": 0.05154374500000358
+      },
+      {
+        "test": "translation",
+        "ok": true,
+        "seconds": 0.05147889900001701
+      },
+      {
+        "test": "nextword",
+        "ok": true,
+        "seconds": 0.05838805900003763
+      },
+      {
+        "test": "language",
+        "ok": true,
+        "seconds": 1.8683931360000088
+      },
+      {
+        "test": "classification_alternatives_and_final_ids",
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_23/540233236.py\", line 42, in check\n    try:fn();row={'test':name,'ok':True,'seconds':time.monotonic()-start}\n        ~~^^\n  File \"/tmp/ipykernel_23/540233236.py\", line 59, in alternatives\n    exec(payload['cards']['lr']['code'],ns)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 2, in <module>\nAssertionError: Train hanya satu kelas: audit split/data\n"
+      },
+      {
+        "test": "partial_labels_threshold_final",
+        "ok": true,
+        "seconds": 0.08446591699998862
+      },
+      {
+        "test": "user_and_duplicate_groups",
+        "ok": true,
+        "seconds": 0.0032140540000114015
+      },
+      {
+        "test": "local_only_transformer_and_e5",
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_23/540233236.py\", line 42, in check\n    try:fn();row={'test':name,'ok':True,'seconds':time.monotonic()-start}\n        ~~^^\n  File \"/tmp/ipykernel_23/540233236.py\", line 85, in neural\n    exec(compile(source,'<cheat:'+key+'>','exec'),ns)\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<cheat:bert_train>\", line 10, in <module>\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/trainer.py\", line 1559, in train\n    return inner_training_loop(\n        args=args,\n    ...<2 lines>...\n        ignore_keys_for_eval=ignore_keys_for_eval,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/trainer.py\", line 1643, in _inner_training_loop\n    self._run_epoch(\n    ~~~~~~~~~~~~~~~^\n        model=model,\n        ^^^^^^^^^^^^\n    ...<9 lines>...\n        steps_trained_in_current_epoch=steps_trained_in_current_epoch,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/trainer.py\", line 1889, in _run_epoch\n    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/trainer.py\", line 2098, in training_step\n    self.accelerator.backward(loss, **kwargs)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/accelerate/accelerator.py\", line 2857, in backward\n    self.scaler.scale(loss).backward(**kwargs)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_tensor.py\", line 631, in backward\n    torch.autograd.backward(\n    ~~~~~~~~~~~~~~~~~~~~~~~^\n        self, gradient, retain_graph, create_graph, inputs=inputs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/__init__.py\", line 381, in backward\n    _engine_run_backward(\n    ~~~~~~~~~~~~~~~~~~~~^\n        tensors,\n        ^^^^^^^^\n    ...<5 lines>...\n        accumulate_grad=True,\n        ^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py\", line 869, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        t_outputs, *args, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )  # Calls into the C++ engine to run the backward pass\n    ^\nRuntimeError: Found dtype Long but expected Float\n"
+      }
+    ],
+    "all_passed": false
+  }
+}

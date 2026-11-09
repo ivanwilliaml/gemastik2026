@@ -1,0 +1,89 @@
+{
+  "dataset": "news",
+  "rows": 91017,
+  "unique": 90885,
+  "n_fit": 30000,
+  "bow_view": "bow_stem",
+  "base": "e5_kmeans_k10",
+  "k_final": 10,
+  "transfer_ARI": 1.0,
+  "post": [],
+  "minutes": 24.972816133166667,
+  "times": [
+    {
+      "tahap": "muat_data",
+      "detik": 3.4269769960000076,
+      "n": null
+    },
+    {
+      "tahap": "eda",
+      "detik": 2.396939787000008,
+      "n": 90885
+    },
+    {
+      "tahap": "preprocessing",
+      "detik": 19.809321975000046,
+      "n": 90885
+    },
+    {
+      "tahap": "stemming",
+      "detik": 311.901387719,
+      "n": 90885
+    },
+    {
+      "tahap": "embed_e5_penuh",
+      "detik": 83.39496151100002,
+      "n": 90885
+    },
+    {
+      "tahap": "ablasi",
+      "detik": 14.488773545999948,
+      "n": 30000
+    },
+    {
+      "tahap": "grid_sampel",
+      "detik": 798.3669356269999,
+      "n": 30000
+    },
+    {
+      "tahap": "bertopic_sampel",
+      "detik": 179.80800632299997,
+      "n": 30000
+    },
+    {
+      "tahap": "c_v",
+      "detik": 5.0030246940000325,
+      "n": 30000
+    },
+    {
+      "tahap": "terapkan_penuh",
+      "detik": 0.059319267999853764,
+      "n": 90885
+    },
+    {
+      "tahap": "post_processing",
+      "detik": 1.95298772000001,
+      "n": 90885
+    }
+  ],
+  "final": {
+    "stability": NaN,
+    "outlier_%": 0.0,
+    "max_share_%": 15.307030554731535,
+    "NPMI": 0.07079841221331407,
+    "diversity": 0.752,
+    "TQ": 0.4026202029922061,
+    "audit_NMI": 0.23697860738166213,
+    "audit_purity": 0.528560598569498,
+    "audit_acc_hungarian": 0.33877187778107387,
+    "min_cluster_size": NaN
+  },
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "umap-learn": "0.5.12",
+    "gensim": "4.4.0"
+  }
+}

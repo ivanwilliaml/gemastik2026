@@ -1,0 +1,5 @@
+label,pattern,n_train,agreement_train,aktif
+positive,^(?:sangat )?(?:bagus|mantap|keren)(?: sekali| banget)?[.! ]*$,6,1.0,False
+positive,^(?:saya )?(?:setuju|mendukung)(?: program ini| mbg)?[.! ]*$,2,0.5,False
+negative,^(?:saya )?tidak setuju(?: program ini| mbg)?[.! ]*$,0,,False
+negative,^(?:program ini |mbg )?(?:buruk|jelek|gagal)(?: sekali| banget)?[.! ]*$,0,,False

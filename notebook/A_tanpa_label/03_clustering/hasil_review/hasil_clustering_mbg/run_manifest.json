@@ -1,0 +1,39 @@
+{
+  "dataset": "mbg",
+  "rows": 5000,
+  "raw_rows": 5035,
+  "seed": 42,
+  "bow_view": "normal",
+  "rep": "e5",
+  "k": 5,
+  "final": "post_konsensus",
+  "domain_stopwords": [
+    "dan",
+    "di",
+    "mbg",
+    "tidak",
+    "yang"
+  ],
+  "final_scores": {
+    "stability_ARI": NaN,
+    "noise_%": 0.0,
+    "max_share_%": 28.64,
+    "min_share_%": 13.3,
+    "NPMI": 0.058613953765781934,
+    "diversity": 0.54,
+    "silhouette_own": 0.08135267347097397,
+    "silhouette_e5": 0.08135267347097397,
+    "DB_own": 3.9477663831799474,
+    "CH_own": 81.78852844238281
+  },
+  "seconds": 265.813344877,
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "umap-learn": "0.5.12",
+    "gensim": "4.4.0",
+    "pandas": "2.3.3"
+  }
+}

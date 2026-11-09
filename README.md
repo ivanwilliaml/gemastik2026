@@ -1,119 +1,70 @@
-# GEMASTIK XIX 2026, Data Mining: persiapan NLP offline
+# GEMASTIK XIX 2026 · Persiapan Data Mining / NLP offline
 
-Semua bahan persiapan final **GEMASTIK XIX, Kompetisi III (Penambangan Data)**, 11 November 2026: data teks, tanpa internet, dikerjakan di PC panitia (i7-12700, RAM 32 GB, RTX 3070). Temanya diperkirakan MBG (Makan Bergizi Gratis), tetapi task dan datanya belum diumumkan, jadi semua alat dibuat modular untuk banyak jenis task.
+Tempat kerja untuk notebook, toolkit lomba, paket instalasi offline, dan dokumen persiapan.
+Tema MBG dipakai untuk latihan; jenis task final dan aturan yang belum pasti dijelaskan di dokumen riset.
 
-Repo ini berisi tiga hal yang saling melengkapi:
+## Mulai dari sini
 
-1. **Paket offline** untuk memasang seluruh environment di PC tanpa internet.
-2. **Toolkit HTML** untuk dibuka saat lomba: pilih task, salin kode per tahap, jalankan.
-3. **Notebook** lengkap per jenis task, plus catatan riset.
-
-## Isi repo
-
-```
-.
-├── NLP-Competition-Toolkit/   Cheat sheet offline (buka index.html) + kode per task
-├── persiapan_h1/              Script unduh, pasang, dan verifikasi environment offline
-├── notebook/                  28 notebook per jenis task + library nlp_kit
-└── docs/                      Ringkasan persiapan dan catatan riset
-```
-
-| Folder | Fungsi | Dibaca |
-|---|---|---|
-| [`NLP-Competition-Toolkit/`](NLP-Competition-Toolkit/) | Aplikasi statis (HTML, CSS, JS murni, tanpa server dan tanpa internet). Isinya 43 task, 20 pipeline kode berurutan, 293 metode dengan kode, 142 snippet, katalog 49 dataset legal, strategi, diagnosis, panduan hardware dan waktu. Kode Python ada di `snippets/` dan `pipelines/` | [README toolkit](NLP-Competition-Toolkit/README.md) |
-| [`persiapan_h1/`](persiapan_h1/) | Tiga script: `01_download_all.py` (unduh semua ke satu folder `bundle`), `02_install_offline.ps1/.bat` (pasang di PC target), `03_verify_offline.py` (cek dan ukur kecepatan nyata) | [README persiapan](persiapan_h1/README.md) |
-| [`notebook/`](notebook/) | 28 notebook (tanpa label, klasifikasi, regresi, label per token, pasangan teks, generatif), library `nlp_kit`, dan generator notebook | [README notebook](notebook/README.md) |
-| [`docs/`](docs/) | `RINGKASAN_PERSIAPAN_GEMASTIK.md` (fakta lomba, hardware, model, strategi 5 jam, risiko, status uji) dan `riset/` (laporan lengkap serta enam catatan mentah) | langsung |
-
-Tidak ikut repo (terlalu besar atau milik pihak lain): bundle offline sekitar 12 GB, dataset latihan, dan PDF buku saku. Cara mendapatkannya ada di bagian [Yang tidak ada di repo](#yang-tidak-ada-di-repo).
-
-## Mulai cepat
-
-### A. Hanya ingin melihat toolkit
-
-Klik dua kali [`NLP-Competition-Toolkit/index.html`](NLP-Competition-Toolkit/index.html). Tidak perlu instalasi.
-
-1. Pilih task di bilah atas, misalnya *Multiclass Classification*. Seluruh halaman menyaring dirinya mengikuti task itu.
-2. Buka **Pipeline per Task**. Task menjadi deretan sel: Setup, Muat data, EDA, Cleaning, Preprocessing, Fitur, Validasi, Model, Transformer, Evaluasi, Post-processing, Submission.
-3. Ubah hanya sel Setup (nama file dan kolom), salin, jalankan, lanjut ke sel berikutnya. Ada tombol **Salin sel**, **Salin semua sel**, dan **Unduh .ipynb**.
-
-`Ctrl K` atau `/` membuka pencarian. Detail tiap halaman ada di [README toolkit](NLP-Competition-Toolkit/README.md).
-
-### B. Menyiapkan environment untuk lomba
-
-Butuh internet, Python 3.12, dan sekitar 12 GB ruang kosong. Pakai **path pendek** (misalnya `C:\gemastik`): pip gagal menulis beberapa file di path panjang.
-
-```bash
-python persiapan_h1/01_download_all.py --out D:\comp\bundle --check
-python persiapan_h1/01_download_all.py --out D:\comp\bundle --profile plus
-```
-
-`--check` hanya memeriksa link dan ukuran. Profil `core` sekitar 8 GB, `plus` sekitar 12 GB, `all` sekitar 30 GB (termasuk LLM lokal). Di akhir, script mencetak daftar unduhan yang harus manual (installer VS Code dan Chrome, driver NVIDIA, dataset yang butuh login).
-
-Salin folder `bundle` ke SSD eksternal. Di PC target, **tanpa internet**:
-
-```bash
-D:\bundle\tools\02_install_offline.bat -Dest C:\gemastik
-```
-
-Script memeriksa kelengkapan bundle, memilih varian torch dari versi CUDA driver, memasang paket dengan `--no-index`, menyalin model, lalu menjalankan verifikasi. Setelah itu buka Jupyter lewat `C:\gemastik\start_jupyter.bat`.
-
-**Latihan wajib:** jalankan langkah ini di laptop dengan Wi-Fi mati dan folder tujuan baru, lalu reboot dan jalankan `03_verify_offline.py` lagi. Latihan baru sah kalau lolos setelah reboot.
-
-### C. Menjalankan notebook
-
-Lihat [README notebook](notebook/README.md). Notebook bersifat mandiri per task dan memakai library `nlp_kit` di folder yang sama.
-
-Untuk mengulik data baru, mulai dari [`notebook/EDA_universal/EDA_universal.ipynb`](notebook/EDA_universal/EDA_universal.ipynb): cukup ubah sel Konfigurasi, dan tiap temuan langsung menunjukkan artinya, aksinya, dan cara mengujinya.
-
-## Rencana hari H
-
-| Tanggal | Kegiatan |
+| Kebutuhan | Buka |
 |---|---|
-| 10 Nov, 13.00 | Set-Up Work Station: pasang bundle, jalankan verifikasi, catat benchmark RTX 3070 |
-| 10 Nov, 16.00 | Technical Meeting: tanyakan aturan yang belum jelas (daftar pertanyaan di `docs/RINGKASAN_PERSIAPAN_GEMASTIK.md`, bagian 9) |
-| 11 Nov, 13.00 sampai 18.00 | Lomba 5 jam |
-| 12 Nov | Presentasi 20 menit per tim |
+| Preprocessing komentar MBG, langkah demi langkah | [Notebook preprocessing](notebook/preprocessing_universal/Preprocessing_universal.ipynb) |
+| Panduan memakai dan mengubah preprocessing | [README preprocessing](notebook/preprocessing_universal/README.md) |
+| Eksplorasi dataset baru | [EDA universal](notebook/eda_universal/EDA_universal.ipynb) |
+| Pilih pipeline NLP saat lomba | [Toolkit offline](toolkit/index.html) |
+| Siapkan instalasi PC tanpa internet | [Panduan persiapan offline](persiapan_offline/README.md) |
+| Aturan, strategi, hardware, dan riset | [Daftar dokumen](docs/README.md) |
 
-Urutan kerja 5 jam dengan gate waktu (T40, T70, T105, ...) ada di halaman *Info Lomba* toolkit dan di bagian 7 ringkasan. Di dalam kode, `clock("tahap")` mencetak menit berjalan dan gate berikutnya, sedangkan `scale_plan` otomatis meringankan eksperimen kalau data melewati 100 ribu baris.
+## Susunan folder
 
-Aturan penting dari panitia: laptop pribadi **tidak boleh menyentuh dataset** (termasuk untuk EDA), dan notebook serta data tidak boleh dibawa pulang. Karena itu seluruh alat di sini dirancang untuk dipasang di PC panitia, dan bahan slide dibuat selagi lomba berjalan.
+```text
+Gemastik/
+├── notebook/             Notebook utama, notebook per task, dan library nlp_kit
+├── toolkit/              Aplikasi HTML offline, pipeline, snippet, dataset latihan
+├── persiapan_offline/    Script download, instalasi offline, dan verifikasi
+├── docs/                 Buku saku, ringkasan persiapan, dan riset
+├── .gitignore
+└── README.md
+```
 
-## Status pengujian
+Nama seluruh folder memakai huruf kecil dengan pemisah garis bawah (`snake_case`).
+Masing-masing bagian mempunyai README sendiri. Buka toolkit/index.html langsung dari browser;
+tidak memerlukan server. Notebook per task tetap memakai struktur A–F dan library yang sama.
 
-Diukur pada 7 November 2026 di laptop dengan GTX 1650 (CUDA), memakai environment yang dipasang dari bundle tanpa internet (Python 3.12, torch 2.14.1+cu130). Rincian dan cara mengulangnya ada di [`sources.md`](NLP-Competition-Toolkit/references/sources.md).
+## Preprocessing MBG
 
-| Uji | Hasil |
-|---|---|
-| Tiap snippet dijalankan sendiri di namespace kosong, dengan model bundle | 142 dari 142 lolos |
-| Semua sel tiap task dijalankan berurutan dalam satu proses, tanpa transformer | 22 dari 22 skenario lolos, termasuk klasifikasi pada komentar TikTok MBG asli yang kotor (duplikat, kosong, label `empty`) dan pipeline ekstraksi |
-| Sama, dengan fine-tuning transformer sungguhan | 8 dari 8 lolos (klasifikasi multikelas, biner, MBG, multilabel, regresi, pasangan, NER, QA) |
+Notebook utama memakai **32 contoh sintetis: satu metode, satu contoh before/after**.
+Contohnya independen agar perubahan dari setiap metode terlihat jelas. Bagian akhir menunjukkan
+API sekali panggil dan kode opsional untuk dataset baru.
 
-Uji pada data MBG kotor menemukan satu bug nyata (split waktu hanya memvalidasi sebagian baris sehingga evaluasi gagal karena NaN), yang sudah diperbaiki.
+Data asli tetap ada di `notebook/preprocessing_universal/data/MBG_PROCESSED.csv` (57.362 komentar).
+Versi notebook dengan output data nyata tersimpan di
+[arsip data nyata](notebook/preprocessing_universal/legacy/Preprocessing_mbg_real.ipynb).
+Ekspor data nyata di `hasil_stepwise/` tetap tersedia dan tidak ditimpa demo.
+Label pada CSV adalah keluaran model, bukan anotasi gold.
 
-**Belum diuji:**
+Pada folder preprocessing: `_build/` berisi pembangun notebook, `tests/` pengujian,
+`reports/` bukti verifikasi, dan `legacy/` versi terdahulu.
 
-- RTX 3070 dan PC panitia. Jalankan ulang saat Set-Up: `python NLP-Competition-Toolkit/tools/test_pipelines.py`.
-- Skala 500 ribu baris (waktu dan RAM). Uji memakai ratusan sampai ribuan baris; `scale_plan` hanyalah pagar, ambangnya belum diukur.
-- Model T5 untuk ringkasan (hanya ada di profil `all`) dan fungsi seq2seq.
-- Script `02_install_offline` itu sendiri (yang diuji hanya pemasangan wheelhouse lewat pip).
-- Notebook di `notebook/` tidak dijalankan ulang dalam sesi ini, dan tombol salin di browser belum diuji dengan clipboard asli.
+## Menyiapkan paket offline
 
-Skor dari sampel kecil tidak bermakna: uji hanya membuktikan kode berjalan. Prioritas task dan probabilitasnya adalah penilaian, bukan informasi panitia.
+Dari folder utama, saat ada internet:
 
-## Yang tidak ada di repo
+```powershell
+python persiapan_offline/01_download_all.py --out D:\comp\bundle --check
+python persiapan_offline/01_download_all.py --out D:\comp\bundle --profile plus
+```
 
-| Apa | Kenapa | Cara mendapatkan |
-|---|---|---|
-| Bundle offline (`bundle/`, sekitar 12 GB) | Terlalu besar | `python persiapan_h1/01_download_all.py --out D:\comp\bundle --profile plus` |
-| Dataset latihan (`NLP-Competition-Toolkit/datasets/<key>/`) | Besar dan milik pihak lain | `python NLP-Competition-Toolkit/tools/download_dataset.py --list`, lalu sebut key-nya. Katalog dan lisensi: `datasets/CATALOG.md` |
-| `Buku Saku Gemastik XIX - 2026 portrait.pdf` | Dokumen resmi panitia | Unduh dari situs GEMASTIK |
-| `notebook/**/hasil/*.csv` | Dibuat ulang saat notebook dijalankan | Jalankan notebook-nya |
+Panduan instalasi, kebutuhan Python/Windows, latihan tanpa Wi-Fi, dan verifikasi GPU ada di
+[persiapan_offline/README.md](persiapan_offline/README.md). Bundle, model, wheelhouse, dan dataset
+lokal tidak dimasukkan ke Git; menyimpan repo saja belum cukup untuk memindahkan seluruh environment.
 
-Setelah mengunduh dataset, jalankan `python NLP-Competition-Toolkit/tools/build_library.py` supaya halaman Dataset menampilkan status "tersimpan lokal" dengan benar.
+## Mengubah isi proyek
 
-## Catatan lisensi dan data
+- **Preprocessing:** ubah `stepwise.py` / `lexicons.py` dan sumber dalam `_build/`, lalu rebuild notebook.
+- **Notebook task:** ubah sumber `notebook/_build/src/` dan blok bersama, kemudian build ulang.
+- **Toolkit:** ubah `toolkit/snippets/` atau `toolkit/pipelines/`, lalu jalankan `python toolkit/tools/build_library.py`.
+- **Data asli:** pertahankan sumbernya; hasil turunan disimpan di folder hasil.
 
-- Dataset di katalog dan di bundle punya lisensi masing-masing (sebagian CC BY-NC-SA). Pakai untuk latihan; saat lomba, gunakan data eksternal hanya bila panitia mengizinkan.
-- Data MBG publik yang dipakai untuk latihan sebagian besar berlabel otomatis (bukan anotasi manusia). Jangan menafsirkan skornya sebagai kebenaran sentimen.
-- Leksikon aspek MBG, probabilitas task, dan angka ambang di dokumen adalah penilaian (hipotesis), bukan informasi dari panitia.
+Pengujian toolkit terdahulu tersimpan di [toolkit/references/](toolkit/references/).
+Validasi di PC panitia, skala 500 ribu baris, dan peningkatan skor task tetap memerlukan pengukuran tersendiri.
+Catatan penataan terbaru tersedia di [docs/CATATAN_PERAPIAN.md](docs/CATATAN_PERAPIAN.md).

@@ -1,0 +1,13 @@
+pandas>=2.2,<3
+ftfy>=6.3,<7
+emoji>=2.14,<3
+beautifulsoup4>=4.12,<5
+symspellpy>=6.7,<7
+datasketch>=1.6,<3
+rapidfuzz>=3.10,<4
+pyarrow>=18
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6
+Sastrawi>=1.0.1,<2
+# Optional for legacy diagnostics: duckdb, fasttext-wheel

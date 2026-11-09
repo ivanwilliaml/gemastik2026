@@ -1,0 +1,143 @@
+{
+  "kernel": "ivanwllm/gemastik-toolkit-modular-smoke",
+  "version": "v1",
+  "status": "COMPLETE",
+  "failureMessage": null,
+  "local_ml_execution": false,
+  "scope": "Synthetic contract smoke, not benchmark accuracy",
+  "live_tests": [],
+  "live_summary": {
+    "passed": 0,
+    "failed": 0
+  },
+  "validation": {
+    "results": [
+      {
+        "test": "masked_unknown_not_negative",
+        "ok": true,
+        "seconds": 0.01406088499999214
+      },
+      {
+        "test": "masked_no_known",
+        "ok": true,
+        "seconds": 0.0001221740000119098
+      },
+      {
+        "test": "negation_preserved",
+        "ok": true,
+        "seconds": 0.03915012499999193
+      },
+      {
+        "test": "connected_endpoints_and_normalization_collision",
+        "ok": true,
+        "seconds": 0.007483742999966125
+      },
+      {
+        "test": "classification_linear_pipeline",
+        "ok": true,
+        "seconds": 1.5883543280000367
+      },
+      {
+        "test": "multilabel_linear_pipeline",
+        "ok": true,
+        "seconds": 2.3476081739999586
+      },
+      {
+        "test": "similarity_linear_pipeline",
+        "ok": true,
+        "seconds": 0.1541205199999922
+      },
+      {
+        "test": "nli_linear_pipeline",
+        "ok": true,
+        "seconds": 1.6146840739999675
+      },
+      {
+        "test": "multi_relevance_retrieval",
+        "ok": true,
+        "seconds": 0.05290692700003774
+      },
+      {
+        "test": "topic_pipeline",
+        "ok": true,
+        "seconds": 0.3046475499999701
+      },
+      {
+        "test": "clustering_pipeline",
+        "ok": true,
+        "seconds": 0.2571143369999618
+      },
+      {
+        "test": "temporal_pipeline",
+        "ok": true,
+        "seconds": 0.36711509399998477
+      },
+      {
+        "test": "calibration_duplicate_rare_threshold",
+        "ok": true,
+        "seconds": 0.003280682000024626
+      },
+      {
+        "test": "word2vec_train_only",
+        "ok": true,
+        "seconds": 17.601667971999973
+      },
+      {
+        "test": "neural_indobertweet",
+        "ok": true,
+        "seconds": 37.26440515600001
+      },
+      {
+        "test": "neural_indobert_p1",
+        "ok": true,
+        "seconds": 11.98706936100001
+      },
+      {
+        "test": "neural_xlmr",
+        "ok": true,
+        "seconds": 23.853697934000024
+      },
+      {
+        "test": "neural_indolem",
+        "ok": true,
+        "seconds": 14.179078736000008
+      },
+      {
+        "test": "neural_nusabert",
+        "ok": true,
+        "seconds": 15.784452380999994
+      },
+      {
+        "test": "neural_multilabel_loss",
+        "ok": true,
+        "seconds": 4.592140301000029
+      },
+      {
+        "test": "neural_similarity_loss",
+        "ok": true,
+        "seconds": 5.845663247999994
+      },
+      {
+        "test": "e5_pooling_prefix",
+        "ok": true,
+        "seconds": 23.61722837100001
+      },
+      {
+        "test": "nli_pretrained_label_mapping",
+        "ok": true,
+        "seconds": 14.709720624
+      },
+      {
+        "test": "sentiment_pretrained_label_mapping",
+        "ok": true,
+        "seconds": 8.948052013999984
+      },
+      {
+        "test": "cross_encoder_retrieval",
+        "ok": true,
+        "seconds": 10.745489182000028
+      }
+    ],
+    "all_passed": true
+  }
+}

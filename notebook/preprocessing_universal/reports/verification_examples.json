@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-08",
+  "notebook_cells": 79,
+  "executed_code_cells": 36,
+  "notebook_errors": 0,
+  "elapsed_seconds": 4.29,
+  "data": "independent synthetic examples only; no CSV loaded",
+  "methods": 32,
+  "examples_per_method": 1,
+  "output_tables_per_method": 1,
+  "rows_per_method_table": 1,
+  "pipeline_example_rows": 1,
+  "parity": "passed: manual pipeline equals one-call API",
+  "real_data_unchanged": true
+}

@@ -43,7 +43,7 @@ smsa = pack / "data/indonlu/dataset/smsa_doc-sentiment-prosa"
 read = lambda s: pd.read_csv(smsa / f"{{s}}_preprocess.tsv", sep="\t", header=None, names=["text", "label"])
 pool = read("train").sample(frac=1, random_state=42).head(5000).reset_index(drop=True)
 smsa_test = read("test")
-nb_dir = root / "B_klasifikasi/08_semi_supervised"
+nb_dir = root / "b_klasifikasi/08_semi_supervised"
 nb_path = nb_dir / "_sumber.ipynb"
 nb_dir.mkdir(parents=True, exist_ok=True)
 nb_path.write_text(PACKED["notebook"], encoding="utf-8")

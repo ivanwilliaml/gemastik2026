@@ -1,0 +1,122 @@
+{
+  "dataset": "gojek",
+  "rows": 224922,
+  "unique": 134605,
+  "n_fit": 30000,
+  "bow_view": "bow_stem",
+  "rep": "e5",
+  "k": 6,
+  "transfer_ARI": 0.9750177712814762,
+  "minutes": 19.214889402149996,
+  "times": [
+    {
+      "tahap": "muat_data",
+      "detik": 3.52426627600002,
+      "n": null
+    },
+    {
+      "tahap": "eda",
+      "detik": 3.1552752810000015,
+      "n": 224922
+    },
+    {
+      "tahap": "eda_noise",
+      "detik": 3.7360075170000187,
+      "n": 134605
+    },
+    {
+      "tahap": "eda_sampel",
+      "detik": 10.608613707999979,
+      "n": 20000
+    },
+    {
+      "tahap": "preprocessing",
+      "detik": 37.965675016999995,
+      "n": 134605
+    },
+    {
+      "tahap": "stemming_sampel",
+      "detik": 97.84212365199997,
+      "n": 30000
+    },
+    {
+      "tahap": "referensi_npmi",
+      "detik": 2.0330351590000078,
+      "n": 134605
+    },
+    {
+      "tahap": "embed_sampel_e5",
+      "detik": 63.49216631500002,
+      "n": 30000
+    },
+    {
+      "tahap": "ablasi_bow",
+      "detik": 12.356855601999996,
+      "n": 30000
+    },
+    {
+      "tahap": "stemming_penuh",
+      "detik": 335.44732430299996,
+      "n": 134605
+    },
+    {
+      "tahap": "tfidf_lsa",
+      "detik": 13.765853830999959,
+      "n": 134605
+    },
+    {
+      "tahap": "word2vec",
+      "detik": 15.36149131400009,
+      "n": 134605
+    },
+    {
+      "tahap": "embed_sampel_indobert_mean",
+      "detik": 29.915747925999995,
+      "n": 30000
+    },
+    {
+      "tahap": "grid_kmeans",
+      "detik": 209.18405020299997,
+      "n": 30000
+    },
+    {
+      "tahap": "algoritma_sampel",
+      "detik": 51.76921268499996,
+      "n": 30000
+    },
+    {
+      "tahap": "umap_hdbscan_sampel",
+      "detik": 84.24984328300002,
+      "n": 30000
+    },
+    {
+      "tahap": "pairwise_subsampel",
+      "detik": 32.28672095000002,
+      "n": 10000
+    },
+    {
+      "tahap": "embed_penuh_e5",
+      "detik": 68.51824723100003,
+      "n": 134605
+    },
+    {
+      "tahap": "kmeans_penuh",
+      "detik": 15.829320163000148,
+      "n": 134605
+    },
+    {
+      "tahap": "post_processing",
+      "detik": 0.003641405000053055,
+      "n": 134605
+    }
+  ],
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "umap-learn": "0.5.12",
+    "gensim": "4.4.0",
+    "pandas": "2.3.3"
+  }
+}

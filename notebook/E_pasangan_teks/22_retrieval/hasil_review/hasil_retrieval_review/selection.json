@@ -1,0 +1,5 @@
+{
+  "method": "02_bm25",
+  "alpha": 0,
+  "rerank_top": 20
+}

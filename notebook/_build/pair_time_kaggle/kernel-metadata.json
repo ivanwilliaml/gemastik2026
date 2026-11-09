@@ -1,0 +1,20 @@
+{
+  "id": "ivanwllm/gemastik-pair-time-review",
+  "title": "Gemastik Pair Time Review",
+  "code_file": "runner.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "enable_internet": true,
+  "dataset_sources": [
+    "linkgish/indosum",
+    "neevvv/indonesia-mbg-sentiment-analysis"
+  ],
+  "kernel_sources": [
+    "ivanwllm/gemastik-nlp-00-setup-offline"
+  ],
+  "competition_sources": [],
+  "model_sources": []
+}

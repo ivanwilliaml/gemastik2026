@@ -1,0 +1,82 @@
+{
+  "static": "passed",
+  "assemblies_checked": 292,
+  "browser_cli_default_equivalence": 8,
+  "runtime": "not_run_locally",
+  "tasks": {
+    "classification": {
+      "combinations": 57,
+      "defaults": [
+        "model.dummy",
+        "model.tfidf_word",
+        "model.tfidf_union",
+        "model.word2vec",
+        "model.indobertweet"
+      ]
+    },
+    "multilabel": {
+      "combinations": 57,
+      "defaults": [
+        "model.dummy",
+        "model.tfidf_word",
+        "model.tfidf_union",
+        "model.e5_head",
+        "model.indobertweet"
+      ]
+    },
+    "similarity": {
+      "combinations": 57,
+      "defaults": [
+        "model.dummy",
+        "model.tfidf_word",
+        "model.tfidf_union",
+        "model.e5_head",
+        "model.indobert_p1"
+      ]
+    },
+    "nli": {
+      "combinations": 68,
+      "defaults": [
+        "model.dummy",
+        "model.tfidf_word",
+        "model.e5_head",
+        "model.nli_pretrained",
+        "model.indobert_p1"
+      ]
+    },
+    "retrieval": {
+      "combinations": 17,
+      "defaults": [
+        "model.tfidf",
+        "model.bm25",
+        "model.e5",
+        "model.rrf",
+        "model.reranker"
+      ]
+    },
+    "topic": {
+      "combinations": 12,
+      "defaults": [
+        "model.nmf",
+        "model.lda",
+        "model.kmeans"
+      ]
+    },
+    "clustering": {
+      "combinations": 12,
+      "defaults": [
+        "model.nmf",
+        "model.lda",
+        "model.kmeans"
+      ]
+    },
+    "temporal": {
+      "combinations": 12,
+      "defaults": [
+        "model.nmf",
+        "model.lda",
+        "model.kmeans"
+      ]
+    }
+  }
+}

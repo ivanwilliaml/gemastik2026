@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NLP Competition Toolkit</title>
+<link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Navigasi utama">
+    <a class="brand" href="#/home"><img src="assets/images/icon.svg" alt="" width="28" height="28"><span>NLP Toolkit<small>GEMASTIK XIX · offline</small></span></a>
+    <nav id="nav"></nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="search" role="search">
+        <input id="q" type="search" placeholder="Cari task, teknik, metrik, kode…" autocomplete="off" spellcheck="false" aria-label="Cari di seluruh toolkit">
+        <kbd>Ctrl K</kbd>
+        <div class="results" id="results" hidden></div>
+      </div>
+      <div class="timer" id="timer"></div>
+      <button class="icon-btn" id="themeBtn" aria-label="Ganti tema" title="Ganti tema">◐</button>
+    </header>
+    <div class="filterbar" role="group" aria-label="Filter task">
+      <label for="taskSel">Task</label>
+      <select id="taskSel"></select>
+      <label class="toggle"><input type="checkbox" id="noPre"><span>Tanpa pretrained</span></label>
+      <a class="small" id="pipeLink" href="#/pipeline">Buka pipeline</a>
+      <button class="btn clearf" id="clearF" hidden>Hapus filter</button>
+    </div>
+    <main class="content" id="content" tabindex="-1"></main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/content/slots.js"></script>
+<script src="assets/js/content/tasks.js"></script>
+<script src="assets/js/content/strategy.js"></script>
+<script src="assets/js/content/filters.js"></script>
+<script src="assets/js/content/methods_a.js"></script>
+<script src="assets/js/content/methods_b.js"></script>
+<script src="assets/js/content/methods_c.js"></script>
+<script src="assets/js/content/toolbox.js"></script>
+<script src="assets/js/content/guide.js"></script>
+<script src="assets/js/content/lomba.js"></script>
+<script src="assets/js/generated/catalog.js"></script>
+<script src="assets/js/generated/bundle.js"></script>
+<script src="assets/js/generated/library.js"></script>
+<script src="assets/js/generated/cheatsheet.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/pages.js"></script>
+<script src="assets/js/cheatsheet.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

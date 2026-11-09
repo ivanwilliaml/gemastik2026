@@ -1,0 +1,6 @@
+{
+  "model": "05_indobert",
+  "isotonic": false,
+  "paraphrase_cut": 4.0,
+  "gold_paraphrase_min": 4.0
+}

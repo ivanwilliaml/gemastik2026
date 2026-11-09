@@ -1,0 +1,12 @@
+{
+  "task": "hasil_temporal_review",
+  "seconds": 101.68241387700004,
+  "gpu": "Tesla T4",
+  "seed": 42,
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "pandas": "2.3.3"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "dataset": "gojek",
+  "n_dev": 0,
+  "rows": 224923,
+  "unique": 134606,
+  "final": "06_ensemble_rata",
+  "multipliers": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "lf_weights": {
+    "kata_kunci": 3.4528480884941315,
+    "pertanyaan": 0.004496635106065541,
+    "emoji": 0.004496635106065541,
+    "e5_prototipe": 4.511959195513157,
+    "nli_zero_shot": 2.227259078110072
+  },
+  "audit": {
+    "model": "FINAL (06_ensemble_rata)",
+    "macro_f1": 0.5871450366813321,
+    "accuracy": 0.8639534418445424,
+    "f1_negatif": 0.7699506857204564,
+    "f1_netral": 0.06286361919153759,
+    "f1_positif": 0.9286208051320022
+  },
+  "minutes": 9.082052751233332,
+  "times": [
+    {
+      "tahap": "muat_data",
+      "detik": 3.468319797999982,
+      "n": null
+    },
+    {
+      "tahap": "eda",
+      "detik": 11.400918207000018,
+      "n": 134606
+    },
+    {
+      "tahap": "preprocessing",
+      "detik": 24.173042742999996,
+      "n": 134606
+    },
+    {
+      "tahap": "lf_murah",
+      "detik": 1.87810920000004,
+      "n": 134606
+    },
+    {
+      "tahap": "lf_e5",
+      "detik": 110.96859090999999,
+      "n": 134606
+    },
+    {
+      "tahap": "lf_nli_sampel",
+      "detik": 101.17892330499996,
+      "n": 20000
+    },
+    {
+      "tahap": "tfidf_lr",
+      "detik": 25.594651569999996,
+      "n": 134606
+    },
+    {
+      "tahap": "e5_lr",
+      "detik": 17.08709254100006,
+      "n": 134606
+    },
+    {
+      "tahap": "indobert_finetune",
+      "detik": 217.32642638099992,
+      "n": 30000
+    }
+  ],
+  "gpu": "Tesla T4",
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "scikit-learn": "1.6.1",
+    "pandas": "2.3.3"
+  }
+}

@@ -35,8 +35,8 @@ def _task(num, name, family, title, datasets=(), gpu=True):
     }
 
 
-A, B, C = "A_tanpa_label", "B_klasifikasi", "C_regresi"
-D, E, F = "D_label_per_token", "E_pasangan_teks", "F_generatif"
+A, B, C = "a_tanpa_label", "b_klasifikasi", "c_regresi"
+D, E, F = "d_label_per_token", "e_pasangan_teks", "f_generatif"
 
 TASKS = [
     {
